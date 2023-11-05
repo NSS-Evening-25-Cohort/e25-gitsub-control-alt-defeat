@@ -1,1 +1,72 @@
-hey guys :P :P
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project</title>
+
+    <!-- Add Bootstrap CSS (you can replace this URL with a local copy of Bootstrap) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Add New Project</h1>
+        <form id="project-form" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter a project name.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="project-description">Project Description:</label>
+                <textarea id="project-description" class="form-control" rows="4" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter a project description.
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Project</button>
+        </form>
+
+        <div class="mt-4">
+            <h2>Project List</h2>
+            <ul id="project-list" class="list-group">
+                <!-- New projects will be added here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (if required) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectForm = document.getElementById('project-form');
+            const projectList = document.getElementById('project-list');
+
+            projectForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const projectName = document.getElementById('project-name').value;
+                const projectDescription = document.getElementById('project-description').value;
+
+                if (projectName && projectDescription) {
+                    const projectItem = document.createElement('li');
+                    projectItem.className = 'list-group-item';
+                    projectItem.innerHTML = `<strong>${projectName}</strong>: ${projectDescription}`;
+                    projectList.appendChild(projectItem);
+
+                    // Clear form fields
+                    document.getElementById('project-name').value = '';
+                    document.getElementById('project-description').value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
