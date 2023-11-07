@@ -3,7 +3,8 @@ const app2 = document.querySelector('#app2');
 
 
 const displayForm = () => {
- const form =
+ const form = 
+
  `<div class="mb-3">
  <label for="exampleFormControlInput1" class="form-label">Email address</label>
  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -16,7 +17,8 @@ app2 = form;
 }
 
 
-const projectList =
+const projectList = 
+
 `<div class="container">
   <div class="row">
     <div class="col">
