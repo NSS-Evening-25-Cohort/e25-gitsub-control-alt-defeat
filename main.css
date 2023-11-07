@@ -12,7 +12,7 @@ body {
 header {
   margin: 3%;
   height: 3rem;
-  width: 75%;
+  width: 65%;
   justify-content: left;
   display: flex;
   gap: 5%;
@@ -32,10 +32,6 @@ header {
   margin: 3%;
 }
 
-#app {
-  width: 600px;
-}
-
 #app1 {
   background-color: aqua;
   height: 250px;
@@ -48,7 +44,7 @@ header {
   height: 250px;
 }
 
-#footer {
+.footer {
   background-color: aquamarine;
   display: flex;
   justify-content: center;
