@@ -1,5 +1,6 @@
-body {
+/* body {
   background-color: black;
+
   display: flex;
   flex-direction: column;
 }
@@ -50,3 +51,4 @@ header {
   justify-content: center;
   gap: 10%;
 }
+
