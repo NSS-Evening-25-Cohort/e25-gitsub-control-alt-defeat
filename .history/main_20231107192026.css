@@ -1,0 +1,28 @@
+body {
+  background-color: black; 
+  display: flex;
+  flex-direction: column;
+}
+
+.headerPlacement {
+  display: flex;
+  justify-content: end;
+}
+
+header {
+  margin: 3%;
+  height: 3rem;
+  width: 65%;
+  justify-content: left;
+-
+
+.footer img {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+#app2 {
+  display: flex;
+  flex-wrap: wrap;
+}
