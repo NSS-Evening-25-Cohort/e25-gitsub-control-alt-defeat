@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-#app1 {
+#app1{
   flex-wrap: wrap;
   display: flex;
   width: 900px;
@@ -28,6 +28,18 @@ body {
 
 .packageHeader {
   color: white;
+}
+
+.mb-3{
+  width:873px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  
+}
+
+.packageHeader{
+  color:white;
   border-bottom: 1px solid gray;
   width: 873px;
   padding-bottom: 10px;
@@ -76,6 +88,27 @@ body {
 
 .btn-secondary {
   background-color: dimgray;
+
+.card-body{
+  border: solid rgb(58, 58, 65) 1px;
+  border-radius: 10px;
+  background-color:black;
+}
+
+.card{
+  background-color:transparent;
+  padding-left: 6px;
+  padding-top: 35px;
+  color:dimgray;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.form-control{
+  background-color:transparent;
+}
+
+.btn-secondary{
+  background-color:dimgray;
   color: black;
   border-radius: 10px;
 }
@@ -90,4 +123,8 @@ body {
   color: antiquewhite;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+
+.cardHeader{
+  color:antiquewhite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

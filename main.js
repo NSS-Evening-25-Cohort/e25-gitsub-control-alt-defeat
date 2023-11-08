@@ -1,4 +1,5 @@
-const packageCards = [
+const packageCards =[
+
   {
     id: 1,
     name: "Ahoy",
@@ -66,5 +67,8 @@ const createPackage = (event) => {
   form.reset();
 };
 form.addEventListener("submit", createPackage);
+}
 
-form.addEventListener("submit", createPackage);
+form.addEventListener("submit", createPackage)
+
+
