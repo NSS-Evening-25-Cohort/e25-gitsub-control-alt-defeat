@@ -1,60 +1,70 @@
-let user = {
-  userPhoto: `"("./images/tomJones.jpg")"`,
-  name: "Tom Jones",
-  userId: "TommyJ",
-  tagLine:
-    "Doing big things and being awesome. Seriously the greatest. Built different.",
-  stats: "10mil Followers - 27 following -500",
-  location: "London, Englad",
-  email: "github@tomJones.com",
-  website: "https://www.tomjones.com",
-  twitter: "@TommyJoJo",
-  highlights: `Artict Code Vault Contributor <br>
-  Git Hub Star <br> PRO`,
-  organizations: "",
-  sponsors: "",
-};
+const packageCards =[
+  {
+    id: 1,
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+  },
+  {
+    id: 2,
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+  },
+  {
+    id: 3,
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+  },
+  {
+    id: 4,
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+  },
+  {
+    id: 5,
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+  },
+  {
+    id: 6,
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+  },
+];
 
-const sidebar = document.getElementById("sidebar");
+const app1 = document.querySelector("#app1");
+const app2 = document.querySelector("#app2");
 
-function renderSidebar() {
-  sidebar.innerHTML = `
-  <div id="sidebar">
-    <div class="userPhoto"></div>
-    <div class="realName">${user.name}</div>
-    <div class="userName">${user.userId}</div>
-    <div class="tagLine">
-${user.tagLine}
+const renderToDom = (packageCards) =>{
+
+  let domString = "";
+
+  for(let card of packageCards){
+    domString += `<div class="card" style="width: 18rem;">
+    <div class="card-body"> 
+      <h5>${card.name}</h5>
+      <p class="card-text">${card.info}</p>
+      <button type="button" class="btn btn-secondary">Learn More</button>
     </div>
-    <div class="buttonRowSide">
-      <button type="button" class="btn btn-secondary">
-        Follow
-      </button>
-      <button type="button" class="btn btn-secondary">
-        Sponsor
-      </button>
-      <button type="button" class="btn btn-secondary">
-        ...
-      </button>
-    </div>
-    <div class="stats">${user.stats}</div>
-    <div class="personalInfo">
-      <ul>${user.location}</ul>
-      <ul>${user.email}</ul>
-      <ul>${user.website}</ul>
-      <ul>${user.twitter}</ul>
-    </div>
-    <div class="highlights">
-      <h1>Highlights</h1>
-${user.highlights}
-    </div>
-    <div class="organizations">
-      <h1>Organizations</h1>${user.organizations}
-    </div>
-    <div class="sponsors">
-      <h1>Sponsors</h1>${user.sponsors}
-    </div>
-  </div>`;
+  </div>`
+  }
+  const app1 = document.querySelector("#app1")
+  app1.innerHTML = domString
 }
+renderToDom(packageCards)
 
-renderSidebar();
+const form = document.querySelector("form");
+
+const createPackage = (event) =>{
+  event.preventDefault();
+  
+  const newPackage = {
+    id: packageCards.length +1,
+    name: document.querySelector("#projectBoardName").value,
+    info: document.querySelector("#projectDescription").value,
+  }
+  packageCards.push(newPackage);
+  renderToDom(packageCards);
+  form.reset();
+}
+form.addEventListener("submit", createPackage)
+

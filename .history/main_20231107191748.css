@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+}
+
+#app1{
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.mb-3{
+  width:500px;
+  color: white;
+}
+
+.packageHeader{
+  color:white;
+}
+
+.card-body{
+  border: solid rgb(58, 58, 65) 1px;
+  border-radius: 25px;
+  background-color:black;
+}
+
+.card{
+  background-color:black;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
