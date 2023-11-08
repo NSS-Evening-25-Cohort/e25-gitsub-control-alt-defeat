@@ -1,0 +1,8 @@
+body {
+  background-color: black;
+}
+
+.card{
+  flex-flow: column;
+  flex-wrap: wrap;
+}
