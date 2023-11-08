@@ -1,4 +1,23 @@
 body {
+  background-color: black;
+}
+
+#app1{
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.mb-3{
+  width:500px;
+  color: white;
+}
+
+.packageHeader{
+  color:white;
+}
+
+.card{
+  width: 100px;
   background-color: aqua; 
  
   /* display: flex;

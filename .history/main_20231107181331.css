@@ -1,0 +1,8 @@
+body {
+  background-color: black;
+}
+
+#card{
+  flex-wrap: wrap;
+  width: 400px;
+}

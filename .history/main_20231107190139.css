@@ -1,3 +1,17 @@
+
+body {
+  background-color: black;
+}
+
+#app1{
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.mb-3{
+  width:500px;
+  color: white;
+
 /* /* body {
   background-color: black; */
 
@@ -61,4 +75,5 @@ header {
   width: 10px;
   height: 10px;
   border-radius: 10px;
+
 }
