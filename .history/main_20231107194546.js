@@ -3,31 +3,39 @@ const packageCards =[
     id: 1,
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    Beta: false
   },
   {
     id: 2,
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    Beta: false
   },
   {
     id: 3,
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    Beta: false
   },
   {
     id: 4,
+    img: "image",
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    Beta: false
   },
   {
     id: 5,
+    imageURL: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.creativebloq.com%2Fnews%2Ftwitter-logo-history&psig=AOvVaw3y8LYKl_CxiwL2W_oTsGUa&ust=1699413723681000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKD7mcz3sIIDFQAAAAAdAAAAABAE",
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    Beta: false
   },
   {
     id: 6,
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    Beta: true
   },
 ];
 
@@ -52,6 +60,13 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
+const betaFilter = (Beta) =>{
+  if(Beta === true)
+  return true
+}
+
+
+
 const form = document.querySelector("form");
 
 const createPackage = (event) =>{
@@ -61,6 +76,7 @@ const createPackage = (event) =>{
     id: packageCards.length +1,
     name: document.querySelector("#projectBoardName").value,
     info: document.querySelector("#projectDescription").value,
+    Beta: betaFilter
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);

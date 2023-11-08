@@ -5,7 +5,6 @@ body {
 #app1{
   flex-wrap: wrap;
   display: flex;
-  width: 900px;
 }
 
 .mb-3{
@@ -19,22 +18,11 @@ body {
 
 .card-body{
   border: solid rgb(58, 58, 65) 1px;
-  border-radius: 10px;
+  border-radius: 25px;
   background-color:black;
 }
 
 .card{
-  background-color:transparent;
-  padding-left: 6px;
-  padding-top: 35px;
-}
-
-.form-control{
-  background-color:transparent;
-}
-
-.beta{
-  height: 50px;
-  width: auto;
-  bottom: 500px;
+  background-color:black;
+  margin-left: auto;
 }

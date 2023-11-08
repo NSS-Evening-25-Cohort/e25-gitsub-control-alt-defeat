@@ -23,11 +23,13 @@ const packageCards =[
     id: 5,
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    imageURL:""
   },
   {
     id: 6,
     name: "Docker",
     info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    imageURL: "https://st4.depositphotos.com/2274151/28310/v/380/depositphotos_283101808-stock-illustration-beta-stamp-beta-square-grunge.jpg"
   },
 ];
 
@@ -44,6 +46,7 @@ const renderToDom = (packageCards) =>{
       <h5>${card.name}</h5>
       <p class="card-text">${card.info}</p>
       <button type="button" class="btn btn-secondary">Learn More</button>
+      <img src="${card.imageURL}" class="img-fluid rounded-start" alt="...">
     </div>
   </div>`
   }

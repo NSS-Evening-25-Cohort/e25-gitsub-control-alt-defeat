@@ -24,17 +24,7 @@ body {
 }
 
 .card{
-  background-color:transparent;
+  background-color:black;
   padding-left: 6px;
   padding-top: 35px;
-}
-
-.form-control{
-  background-color:transparent;
-}
-
-.beta{
-  height: 50px;
-  width: auto;
-  bottom: 500px;
 }

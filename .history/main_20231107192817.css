@@ -33,8 +33,7 @@ body {
   background-color:transparent;
 }
 
-.beta{
-  height: 50px;
-  width: auto;
-  bottom: 500px;
+.btn-secondary{
+  width: 100px;
+  height: 100px;
 }
