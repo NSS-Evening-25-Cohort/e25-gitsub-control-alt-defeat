@@ -1,6 +1,5 @@
 body {
   background-color: black;
-
   display: flex;
   flex-direction: column;
 }
@@ -151,46 +150,6 @@ ul {
   width: 800px;
 }
 
-#app2 {
-  color: white;
-  margin-top: 5%;
-  border: solid 1px white;
-  height: 500px;
-  width: 800px;
-}
-
-.footer {
-  color: white;
-  border: solid 1px white;
-  display: flex;
-  justify-content: center;
-  gap: 10%;
-}
-
-.appContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3%;
-}
-#app2 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: calc(33% - 20px);
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5 px rgba(0, 0, 0, 0.2);
-}
-.card-body {
-  padding: 15px;
-}
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -198,6 +157,7 @@ ul {
   align-items: center;
   margin-top: 10px;
 }
+
 .footer img {
   width: 16px;
   height: 16px;
@@ -213,10 +173,20 @@ button img {
   height: 16px;
 }
 
-#app1 {
-  flex-wrap: wrap;
+#app2 {
+  color: white;
+  margin-top: 5%;
+  border: solid 1px white;
+  height: 500px;
+  width: 800px;
+}
+
+.footer {
+  color: white;
+  border: solid 1px white;
   display: flex;
-  width: 900px;
+  justify-content: center;
+  gap: 10%;
 }
 
 .mb-3 {
@@ -242,10 +212,4 @@ button img {
 
 .form-control {
   background-color: transparent;
-}
-
-.beta {
-  height: 50px;
-  width: auto;
-  bottom: 500px;
 }
