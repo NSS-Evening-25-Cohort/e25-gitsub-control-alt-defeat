@@ -1,28 +1,76 @@
-const app1 = document.querySelector("#app1");
-const app2 = document.querySelector("#app2");
+let app1 = document.querySelector('#app1');
+let app2 = document.querySelector('#app2');
+let form = document.querySelector('form')
+
+let projects = [
+{
+  id: 1,
+  title: 'Example 1',
+  Private: true,
+  description: '',
+  updated: '44 seconds ago'
+},
+{
+  id: 2,
+  title: 'my-goals',
+  Private: false,
+  description: '',
+  updated: '7 hours ago'
+},
+{
+  id: 3,
+  title: 'Sample My Goals',
+  Private: false,
+  description: 'Goals for the NSS Bootcamp',
+  updated: '1 minute ago'
+}
+]
+
+  let list = [];
+const displayProjects = (array) => {
+  for (object of array) {
+    let newItem = 
+    `<div class="m-4">
+      <dl class="row">
+          <dt class="col-sm-3">${object.title}</dt>
+          <dd class="col-sm-9">${object.description}</dd>
+      </dl>
+    </div>`
+    list += newItem
+  }
+  app1.innerHTML = list
+}
+
+displayProjects(projects);
 
 const displayForm = () => {
-  const form = `<div class="mb-3">
- <label for="exampleFormControlInput1" class="form-label">Email address</label>
- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>`;
-  app2 = form;
-};
-
-const projectList = `<div class="container">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
+ const form = 
+ `<form>
+  <div class="mb-3">
+    <label for="title-input" class="titleLabel">Project Title</label>
+    <input type="text" class="titleInput" id="title-input" placeholder="title">
   </div>
-</div>`;
+  <div class="mb-3">
+    <label for="desc-input" class="descLabel">Description</label>
+    <input type="text" class="descInput" id="desc-input" placeholder="description">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>`;
+app2.innerHTML = form;
+}
+
+displayForm();
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const newItem = {
+    id: projects.length + 1,
+    title: document.querySelector('#title-input').value,
+    description: document.querySelector('#desc-input').value,
+  }
+  projects.push(newItem);
+  displayProjects(projects);
+  form.reset(); //resume here
+})
+
+console.log(document.querySelector('#desc-input'));
