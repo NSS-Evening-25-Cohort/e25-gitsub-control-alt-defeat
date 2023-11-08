@@ -38,7 +38,7 @@ const renderToDom = (packageCards) => {
   let domString = "";
 
   for (let card of packageCards) {
-    domString += `<div class="card" style="width: 18rem;">
+    domString += `<div class="card">
     <div class="card-body"> 
       <h5 class="cardHeader">${card.name}</h5>
       <p class="card-text">${card.info}</p>
