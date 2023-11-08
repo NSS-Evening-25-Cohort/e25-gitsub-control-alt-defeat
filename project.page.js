@@ -1,5 +1,5 @@
-const app1 = document.querySelector('#app1');
-const app2 = document.querySelector('#app2');
+let app1 = document.querySelector('#app1');
+let app2 = document.querySelector('#app2');
 
 
 const displayForm = () => {
@@ -12,12 +12,11 @@ const displayForm = () => {
  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>`;
-app2 = form;
+app2.innerHTML = form;
 }
 
-
-const projectList =
-`<div class="container">
+const projectList = () => {
+const list = `<div class="container">
   <div class="row">
     <div class="col">
       Column
@@ -30,3 +29,8 @@ const projectList =
     </div>
   </div>
 </div>`
+app1.innerHTML = list;
+}
+
+displayForm();
+projectList();
