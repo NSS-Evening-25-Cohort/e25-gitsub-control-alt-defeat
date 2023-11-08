@@ -1,29 +1,3 @@
-let user = {
-  userPhoto: `"("./images/tomJones.jpg")"`,
-  name: "Tom Jones",
-  userId: "TommyJ",
-  tagLine:
-    "Doing big things and being awesome. Seriously the greatest. Built different.",
-  stats: "10mil Followers - 27 following -500",
-  location: "London, Englad",
-  email: "github@tomJones.com",
-  website: "https://www.tomjones.com",
-  twitter: "@TommyJoJo",
-  highlights: `"Artict Code Vault Contributor <br>
-  Git Hub Star <br> PRO"`,
-  organizations: "",
-  sponsors: "",
-};
-
-const userPhoto = document.querySelector("userPhoto");
-const realName = document.querySelector("realName");
-const userName = document.querySelector("userName");
-const tagLine = document.querySelector("tagLine");
-const stats = document.querySelector("stats");
-const personalInfo = document.querySelector("personalInfo");
-const highlights = document.querySelector("highlights");
-const sponsors = document.querySelector("sponsors");
-
 const packageCards = [
   {
     id: 1,
@@ -72,22 +46,23 @@ const renderToDom = (packageCards) => {
     </div>
   </div>`;
   }
+  const app1 = document.querySelector("#app1");
   app1.innerHTML = domString;
 };
-// renderToDom(packageCards);
+renderToDom(packageCards);
 
 const form = document.querySelector("form");
 
-// const createPackage = (event) =>{
-//   event.preventDefault();
+const createPackage = (event) => {
+  event.preventDefault();
 
-//   const newPackage = {
-//     id: packageCards.length +1,
-//     name: document.querySelector("#projectBoardName").value,
-//     info: document.querySelector("#projectDescription").value,
-//   }
-//   packageCards.push(newPackage);
-//   renderToDom(packageCards);
-//   form.reset();
-// }
-// form.addEventListener("submit", createPackage)
+  const newPackage = {
+    id: packageCards.length + 1,
+    name: document.querySelector("#projectBoardName").value,
+    info: document.querySelector("#projectDescription").value,
+  };
+  packageCards.push(newPackage);
+  renderToDom(packageCards);
+  form.reset();
+};
+form.addEventListener("submit", createPackage);
