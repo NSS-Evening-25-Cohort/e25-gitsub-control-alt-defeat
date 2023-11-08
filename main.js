@@ -67,3 +67,4 @@ const createPackage = (event) =>{
   form.reset();
 }
 form.addEventListener("submit", createPackage)
+

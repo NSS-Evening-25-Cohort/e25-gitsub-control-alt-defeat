@@ -1,0 +1,90 @@
+/* body {
+  background-color: black; 
+  display: flex;
+  flex-direction: column;
+}
+
+.headerPlacement {
+  display: flex;
+  justify-content: end;
+}
+
+header {
+  margin: 3%;
+  height: 3rem;
+  width: 65%;
+  justify-content: left;
+  display: flex;
+  gap: 5%;
+  background-color: blue;
+}
+
+#sidebar {
+  background-color: blueviolet;
+  float: left;
+  margin-right: 8%;
+  width: 175px;
+}
+
+.appContainer {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}
+
+#app1 {
+  background-color: aqua;
+  height: 250px;
+  width: 400px;
+}
+
+#app2 {
+  margin-top: 5%;
+  background-color: blue;
+  height: 250px;
+}
+
+.footer {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}   */
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3%;
+  }
+#app2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding:20px;
+  justify-content: center;
+}
+.card {
+  background-color:#fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(33);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5 px rgba(0,0,0,0.2);;
+}
+.card-body {
+  padding: 15px;
+}
+.footer {
+  display:flex;
+  flex-wrap: wrap;
+  gap:10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.footer img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
