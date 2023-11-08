@@ -1,33 +1,33 @@
 const packageCards =[
   {
     id: 1,
-    name: "Ahoy",
-    info: "Ahoy there, me hearties! The sun be settin' on the horizon, and the crew be gatherin' on deck. We be chartin' a course to find the hidden treasure on Skull Island. Hoist the Jolly Roget and prepare to set sail for adventure and riches.",
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 2,
-    name: "Matey",
-    info: "Arr, matey! Pass me the grog and let's raise a toast to the finest crew a pirate ever sailed with.",
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 3,
-    name: "Landlubber",
-    info: "Avast, ye scurvy landlubber! If ye can't tie a proper knot, ye'll be swabbin' the decks for the rest of the voyage",
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 4,
-    name: "Jolly Roger",
-    info: "The sight of the Jolly Roger flying high above the pirate ship struck fear into the hearts of any sailer unlucky enough to cross their path.",
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 5,
-    name: "Swashbuckler",
-    info: "That swashbuckler, Captain Blackbeard, swung from the rigging, cutlass in hand, and boarded the merchant ship with a gleam is his eye and thirst for adventure.",
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 6,
-    name: "Davy Jones' Locker",
-    info: "If ye don't heed the call of the sea, ye might just find yerself in Davy Jones' locker, where no man returns.",
+    name: "Docker",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
 ];
 

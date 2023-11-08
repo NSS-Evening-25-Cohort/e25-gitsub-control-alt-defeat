@@ -9,12 +9,18 @@ body {
 }
 
 .mb-3{
-  width:500px;
+  width:873px;
   color: white;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  
 }
 
 .packageHeader{
   color:white;
+  border-bottom: 1px solid gray;
+  width: 873px;
+  padding-bottom: 10px;
 }
 
 .card-body{
@@ -27,14 +33,19 @@ body {
   background-color:transparent;
   padding-left: 6px;
   padding-top: 35px;
+  color:dimgray;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .form-control{
   background-color:transparent;
 }
 
-.beta{
-  height: 50px;
-  width: auto;
-  bottom: 500px;
+.btn-secondary{
+  background-color:dimgray;
+  color: black;
+}
+
+.cardHeader{
+  color:antiquewhite;
 }

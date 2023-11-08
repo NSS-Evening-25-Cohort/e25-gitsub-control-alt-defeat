@@ -17,17 +17,17 @@ const packageCards =[
   {
     id: 4,
     name: "Jolly Roger",
-    info: "The sight of the Jolly Roger flying high above the pirate ship struck fear into the hearts of any sailer unlucky enough to cross their path.",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 5,
-    name: "Swashbuckler",
-    info: "That swashbuckler, Captain Blackbeard, swung from the rigging, cutlass in hand, and boarded the merchant ship with a gleam is his eye and thirst for adventure.",
+    name: "Swashbucklerr",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
   {
     id: 6,
     name: "Davy Jones' Locker",
-    info: "If ye don't heed the call of the sea, ye might just find yerself in Davy Jones' locker, where no man returns.",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
 ];
 
