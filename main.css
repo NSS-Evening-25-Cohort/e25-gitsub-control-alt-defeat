@@ -170,3 +170,8 @@ button img {
   align-items: center;
   line-height: 1.1;
 }
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}

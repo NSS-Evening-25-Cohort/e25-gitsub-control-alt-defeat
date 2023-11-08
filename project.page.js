@@ -1,33 +1,33 @@
-let app1 = document.querySelector('#app1');
-let app2 = document.querySelector('#app2');
-let form = document.querySelector('form')
 
 let projects = [
-{
-  id: 1,
-  title: 'Example 1',
-  Private: true,
-  description: '',
-  updated: '44 seconds ago'
-},
-{
-  id: 2,
-  title: 'my-goals',
-  Private: false,
-  description: '',
-  updated: '7 hours ago'
-},
-{
-  id: 3,
-  title: 'Sample My Goals',
-  Private: false,
-  description: 'Goals for the NSS Bootcamp',
-  updated: '1 minute ago'
-}
+  {
+    id: 1,
+    title: 'Example 1',
+    Private: true,
+    description: '',
+    updated: '44 seconds ago'
+  },
+  {
+    id: 2,
+    title: 'my-goals',
+    Private: false,
+    description: '',
+    updated: '7 hours ago'
+  },
+  {
+    id: 3,
+    title: 'Sample My Goals',
+    Private: false,
+    description: 'Goals for the NSS Bootcamp',
+    updated: '1 minute ago'
+  }
 ]
 
-  let list = [];
+let app1 = document.querySelector('#app1');
+let app2 = document.querySelector('#app2');
+
 const displayProjects = (array) => {
+let list = [];
   for (object of array) {
     let newItem = 
     `<div class="m-4">
@@ -45,7 +45,7 @@ displayProjects(projects);
 
 const displayForm = () => {
  const form = 
- `<form>
+ `<form id="form">
   <div class="mb-3">
     <label for="title-input" class="titleLabel">Project Title</label>
     <input type="text" class="titleInput" id="title-input" placeholder="title">
@@ -61,6 +61,9 @@ app2.innerHTML = form;
 
 displayForm();
 
+console.log(form);
+console.log(app1);
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const newItem = {
@@ -70,7 +73,5 @@ form.addEventListener('submit', (e) => {
   }
   projects.push(newItem);
   displayProjects(projects);
-  form.reset(); //resume here
+  form.reset(); 
 })
-
-console.log(document.querySelector('#desc-input'));
