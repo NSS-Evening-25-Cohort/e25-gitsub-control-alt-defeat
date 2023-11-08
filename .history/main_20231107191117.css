@@ -1,0 +1,60 @@
+/* body {
+  background-color: black; 
+  */
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.headerPlacement {
+  display: flex;
+  justify-content: end;
+}
+
+header {
+  margin: 3%;
+  height: 3rem;
+  width: 65%;
+  justify-content: left;
+  display: flex;
+  gap: 5%;
+  background-color: blue;
+}
+
+#sidebar {
+  background-color: blueviolet;
+  float: left;
+  margin-right: 8%;
+  width: 175px;
+}
+
+.appContainer {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}
+
+#app1 {
+  background-color: aqua;
+  height: 250px;
+  width: 400px;
+}
+
+#app2 {
+  margin-top: 5%;
+  background-color: blue;
+  height: 250px;
+}
+
+.footer {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+} */ 
+
+.footer img {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
