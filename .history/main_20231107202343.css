@@ -1,5 +1,10 @@
+
 body {
   background-color: black;
+
+/* body {
+  background-color: black; 
+
   display: flex;
   flex-direction: column;
 }
@@ -150,29 +155,6 @@ ul {
   width: 800px;
 }
 
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.footer img {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.card button {
-  width: 100px;
-  height: 50px;
-}
-button img {
-  width: 16px;
-  height: 16px;
-}
-
 #app2 {
   color: white;
   margin-top: 5%;
@@ -187,62 +169,93 @@ button img {
   display: flex;
   justify-content: center;
   gap: 10%;
+}   */
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3%;
+  }
+#app2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding:20px;
+  justify-content: center;
+}
+.card {
+  background-color:#fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(33% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5 px rgba(0,0,0,0.2);;
+}
+.card-body {
+  padding: 15px;
+}
+.footer {
+  display:flex;
+  flex-wrap: wrap;
+  gap:10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.footer img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.card button  {
+  width: 100px;
+  height: 50px;
+}
+button img {
+  width: 16px;
+  height: 16px;
 }
 
-.mb-3 {
-  width: 500px;
-}
-
-#app1 {
+#app1{
   flex-wrap: wrap;
   display: flex;
   width: 900px;
 }
 
-.mb-3 {
-  width: 873px;
+.mb-3{
+  width:500px;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 25px;
 }
 
-.packageHeader {
-  color: white;
-}
-.packageHeader {
-  color: white;
+.packageHeader{
+  color:white;
   border-bottom: 1px solid gray;
-  width: 873px;
-  padding-bottom: 10px;
-  padding-top: 30px;
+  width: auto;
 }
 
-.card-body {
+.card-body{
   border: solid rgb(58, 58, 65) 1px;
   border-radius: 10px;
-  background-color: black;
+  background-color:black;
 }
 
-.card {
-  background-color: transparent;
+.card{
+  background-color:transparent;
   padding-left: 6px;
   padding-top: 35px;
-  color: dimgray;
-  font-family: "Times New Roman", Times, serif;
 }
 
-.form-control {
-  background-color: transparent;
+.form-control{
+  background-color:transparent;
+}
+<<<<<<< HEAD:.history/main_20231107202343.css
+=======
+
+.beta{
+  height: 50px;
+  width: auto;
+  bottom: 500px;
 }
 
-.btn-secondary {
-  background-color: dimgray;
-  color: black;
-  border-radius: 10px;
-}
-
-.cardHeader {
-  color: antiquewhite;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
+>>>>>>> main:main.css

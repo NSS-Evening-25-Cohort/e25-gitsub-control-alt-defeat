@@ -1,4 +1,4 @@
-const packageCards = [
+const packageCards =[
   {
     id: 1,
     name: "Ahoy",
@@ -34,37 +34,36 @@ const packageCards = [
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
 
-const renderToDom = (packageCards) => {
+const renderToDom = (packageCards) =>{
+
   let domString = "";
 
-  for (let card of packageCards) {
+  for(let card of packageCards){
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-body"> 
       <h5 class="cardHeader">${card.name}</h5>
       <p class="card-text">${card.info}</p>
       <button type="button" class="btn btn-secondary">Learn More</button>
     </div>
-  </div>`;
+  </div>`
   }
-  const app1 = document.querySelector("#app1");
-  app1.innerHTML = domString;
-};
-renderToDom(packageCards);
+  const app1 = document.querySelector("#app1")
+  app1.innerHTML = domString
+}
+renderToDom(packageCards)
 
 const form = document.querySelector("form");
 
-const createPackage = (event) => {
+const createPackage = (event) =>{
   event.preventDefault();
-
+  
   const newPackage = {
-    id: packageCards.length + 1,
+    id: packageCards.length +1,
     name: document.querySelector("#projectBoardName").value,
     info: document.querySelector("#projectDescription").value,
-  };
+  }
   packageCards.push(newPackage);
   renderToDom(packageCards);
   form.reset();
-};
-form.addEventListener("submit", createPackage);
-
-form.addEventListener("submit", createPackage);
+}
+form.addEventListener("submit", createPackage)

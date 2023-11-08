@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+}
+
+#app1{
+  flex-wrap: wrap;
+  display: flex;
+  width: 900px;
+}
+
+.mb-3{
+  width:875px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border-bottom: solid gray 1px;
+}
+
+.packageHeader{
+  color:white;
+  border-bottom: 1px solid gray;
+  width: 500px;
+  padding-bottom: 10px;
+}
+
+.card-body{
+  border: solid rgb(58, 58, 65) 1px;
+  border-radius: 10px;
+  background-color:black;
+}
+
+.card{
+  background-color:transparent;
+  padding-left: 6px;
+  padding-top: 35px;
+}
+
+.form-control{
+  background-color:transparent;
+}
