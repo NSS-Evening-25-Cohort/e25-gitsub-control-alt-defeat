@@ -35,6 +35,7 @@ const packageCards =[
 
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
+const form = document.querySelector("form");
 
 const renderToDom = (packageCards) =>{
 
@@ -42,10 +43,12 @@ const renderToDom = (packageCards) =>{
 
   for(let card of packageCards){
     domString += `<div class="card" style="width: 18rem;">
-    <div class="card-body"> 
-      <h5>${card.name}</h5>
-      <p class="card-text">${card.info}</p>
-      <button type="button" class="btn btn-secondary">Learn More</button>
+    <div class="card-body"> ${card.name}
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
     </div>
   </div>`
   }
@@ -54,19 +57,17 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
-
-const form = document.querySelector("form");
-
 const createPackage = (event) =>{
   event.preventDefault();
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.querySelector("#projectBoardName").value,
-    info: document.querySelector("#projectDescription").value,
+    name: document.querySelector("#boardName").value,
+    info: document.querySelector("descriptionName").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
   form.reset();
 }
+
 form.addEventListener("submit", createPackage)

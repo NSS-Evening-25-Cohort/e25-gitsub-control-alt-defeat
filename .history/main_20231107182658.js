@@ -52,7 +52,7 @@ const renderToDom = (packageCards) =>{
   const app1 = document.querySelector("#app1")
   app1.innerHTML = domString
 }
-renderToDom(packageCards)
+// renderToDom(packageCards)
 
 
 const form = document.querySelector("form");
@@ -62,8 +62,8 @@ const createPackage = (event) =>{
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.querySelector("#projectBoardName").value,
-    info: document.querySelector("#projectDescription").value,
+    name: document.querySelector("#boardName").value,
+    info: document.querySelector("#descriptionName").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);

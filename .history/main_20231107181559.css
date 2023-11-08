@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-#app1{
+.card{
   flex-flow: column;
   flex-wrap: wrap;
 }

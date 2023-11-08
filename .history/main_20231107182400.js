@@ -62,11 +62,13 @@ const createPackage = (event) =>{
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.querySelector("#projectBoardName").value,
-    info: document.querySelector("#projectDescription").value,
+    name: document.querySelector("#boardName").value,
+    info: document.querySelector("#descriptionName").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
+  console.log("this is working")
   form.reset();
 }
+
 form.addEventListener("submit", createPackage)

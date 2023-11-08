@@ -35,6 +35,7 @@ const packageCards =[
 
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
+const form = document.querySelector("form");
 
 const renderToDom = (packageCards) =>{
 
@@ -46,6 +47,7 @@ const renderToDom = (packageCards) =>{
       <h5>${card.name}</h5>
       <p class="card-text">${card.info}</p>
       <button type="button" class="btn btn-secondary">Learn More</button>
+     
     </div>
   </div>`
   }
@@ -54,19 +56,17 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
-
-const form = document.querySelector("form");
-
 const createPackage = (event) =>{
   event.preventDefault();
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.querySelector("#projectBoardName").value,
-    info: document.querySelector("#projectDescription").value,
+    name: document.querySelector("#boardName").value,
+    info: document.querySelector("#descriptionName").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
   form.reset();
 }
+
 form.addEventListener("submit", createPackage)
