@@ -27,7 +27,7 @@ const packageCards =[
   {
     id: 6,
     name: "Davy Jones' Locker",
-    info: "If ye don't heed the call of the sea, ye might just find yerself in Davy Jones' locker, where no man returns.",
+    info: "A software platform used for building applications based on containers small and lightweight execution environments",
   },
 ];
 
@@ -67,4 +67,3 @@ const createPackage = (event) =>{
   form.reset();
 }
 form.addEventListener("submit", createPackage)
-

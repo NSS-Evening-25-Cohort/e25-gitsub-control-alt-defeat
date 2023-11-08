@@ -21,7 +21,7 @@ body {
   border-bottom: 1px solid gray;
   width: 873px;
   padding-bottom: 10px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .card-body{
@@ -45,7 +45,6 @@ body {
 .btn-secondary{
   background-color:dimgray;
   color: black;
-  border-radius: 10px;
 }
 
 .cardHeader{

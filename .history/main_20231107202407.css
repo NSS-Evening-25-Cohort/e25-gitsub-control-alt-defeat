@@ -9,19 +9,14 @@ body {
 }
 
 .mb-3{
-  width:873px;
+  width:500px;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 25px;
-  
 }
 
 .packageHeader{
   color:white;
   border-bottom: 1px solid gray;
-  width: 873px;
-  padding-bottom: 10px;
-  padding-top: 30px;
+  width: 500px;
 }
 
 .card-body{
@@ -34,21 +29,8 @@ body {
   background-color:transparent;
   padding-left: 6px;
   padding-top: 35px;
-  color:dimgray;
-  font-family:'Times New Roman', Times, serif;
 }
 
 .form-control{
   background-color:transparent;
-}
-
-.btn-secondary{
-  background-color:dimgray;
-  color: black;
-  border-radius: 10px;
-}
-
-.cardHeader{
-  color:antiquewhite;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
