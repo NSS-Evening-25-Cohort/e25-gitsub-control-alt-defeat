@@ -147,7 +147,17 @@ ul {
   color: white;
   border: solid 1px white;
   height: 500px;
-  width: 800px;
+  width: 900px;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+#app2 {
+  color: white;
+  margin-top: 5%;
+  border: solid 1px white;
+  height: 500px;
+  width: 900px;
 }
 
 .footer {
@@ -171,14 +181,6 @@ ul {
 button img {
   width: 16px;
   height: 16px;
-}
-
-#app2 {
-  color: white;
-  margin-top: 5%;
-  border: solid 1px white;
-  height: 500px;
-  width: 800px;
 }
 
 .footer {
@@ -246,10 +248,6 @@ button img {
 
 .form-control {
   background-color: transparent;
-}
-
-.btn-secondary {
-  background-color: dimgray;
 }
 
 .btn-secondary {
