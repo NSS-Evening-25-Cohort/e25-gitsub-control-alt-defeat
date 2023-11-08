@@ -1,33 +1,33 @@
 const packageCards = [
   {
     id: 1,
-    name: "Docker",
-    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    name: "Ahoy",
+    info: "Ahoy there, me hearties! The sun be settin' on the horizon, and the crew be gatherin' on deck. We be chartin' a course to find the hidden treasure on Skull Island. Hoist the Jolly Roget and prepare to set sail for adventure and riches.",
   },
   {
     id: 2,
-    name: "Docker",
-    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    name: "Matey",
+    info: "Arr, matey! Pass me the grog and let's raise a toast to the finest crew a pirate ever sailed with.",
   },
   {
     id: 3,
-    name: "Docker",
-    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    name: "Landlubber",
+    info: "Avast, ye scurvy landlubber! If ye can't tie a proper knot, ye'll be swabbin' the decks for the rest of the voyage",
   },
   {
     id: 4,
-    name: "Docker",
-    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    name: "Jolly Roger",
+    info: "The sight of the Jolly Roger flying high above the pirate ship struck fear into the hearts of any sailer unlucky enough to cross their path.",
   },
   {
     id: 5,
-    name: "Docker",
-    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    name: "Swashbuckler",
+    info: "That swashbuckler, Captain Blackbeard, swung from the rigging, cutlass in hand, and boarded the merchant ship with a gleam is his eye and thirst for adventure.",
   },
   {
     id: 6,
-    name: "Docker",
-    info: "A software platform used for building applications based on containers small and lightweight execution environments",
+    name: "Davy Jones' Locker",
+    info: "If ye don't heed the call of the sea, ye might just find yerself in Davy Jones' locker, where no man returns.",
   },
 ];
 
@@ -40,7 +40,7 @@ const renderToDom = (packageCards) => {
   for (let card of packageCards) {
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-body"> 
-      <h5>${card.name}</h5>
+      <h5 class="cardHeader">${card.name}</h5>
       <p class="card-text">${card.info}</p>
       <button type="button" class="btn btn-secondary">Learn More</button>
     </div>
