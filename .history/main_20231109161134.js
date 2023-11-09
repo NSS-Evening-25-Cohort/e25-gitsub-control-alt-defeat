@@ -31,7 +31,8 @@ const packageCards =[
   },
 ];
 
-const packageForm =[{}]
+const packageForm =[];
+
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
 
@@ -40,7 +41,6 @@ const renderToDom = (packageCards) =>{
   let domString = "";
 
   for(let card of packageCards){
-    
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-body"> 
       <h5 class="cardHeader">${card.name}</h5>
@@ -54,42 +54,43 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
+const form = document.querySelector("form");
 
 const formToDom = (packageForm) =>{
 
   let formString = "";
 
   for(let form of packageForm){
-    formString += `<form>
-    <div class="mb-3">
-    Project Board Name
-    <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
-    </div>
-    <div class="form-group mb-3">
-        <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
-        <textarea class="form-control" id="projectDescription" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">Create Project</button>
-</form>`
-}
+  //   formString += `<div class="mb-3">
+  //   <label for="exampleInputEmail1" class="form-label" id="boardName">Project board name</label>
+  //   <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
+  // </div>
+  // <div class="form-group mb-3">
+  //   <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
+  //   <textarea class="form-control" id="projectDescription" rows="3"></textarea>
+  // </div>
+  // </div>
+  // <button type="submit" class="btn btn-success">Create Project</button> `
+  }
   const app2 = document.querySelector("#app2")
   app2.innerHTML = formString
 }
 
 formToDom(packageForm)
-const form = document.querySelector("form");
+
+
+
 
 const createPackage = (event) =>{
   event.preventDefault();
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.getElementById("projectBoardName").value,
-    info: document.getElementById("projectDescription").value,
+    name: document.querySelector("#projectBoardName").value,
+    info: document.querySelector("#projectDescription").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
-  formToDom(packageForm);
   form.reset();
 }
 form.addEventListener("submit", createPackage)

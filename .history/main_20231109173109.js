@@ -30,7 +30,6 @@ const packageCards =[
     info: "If ye don't heed the call of the sea, ye might just find yerself in Davy Jones' locker, where no man returns.",
   },
 ];
-
 const packageForm =[{}]
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
@@ -52,8 +51,6 @@ const renderToDom = (packageCards) =>{
   const app1 = document.querySelector("#app1")
   app1.innerHTML = domString
 }
-renderToDom(packageCards)
-
 
 const formToDom = (packageForm) =>{
 
@@ -76,7 +73,6 @@ const formToDom = (packageForm) =>{
   app2.innerHTML = formString
 }
 
-formToDom(packageForm)
 const form = document.querySelector("form");
 
 const createPackage = (event) =>{
@@ -89,7 +85,13 @@ const createPackage = (event) =>{
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
-  formToDom(packageForm);
   form.reset();
 }
 form.addEventListener("submit", createPackage)
+
+const startApp = () => {
+ renderToDom(packageCards);
+ formToDom(packageForm);
+};
+
+startApp();

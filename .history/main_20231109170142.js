@@ -31,7 +31,7 @@ const packageCards =[
   },
 ];
 
-const packageForm =[{}]
+const packageForm =[]
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
 
@@ -54,6 +54,7 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
+const form = document.querySelector("form");
 
 const formToDom = (packageForm) =>{
 
@@ -62,14 +63,15 @@ const formToDom = (packageForm) =>{
   for(let form of packageForm){
     formString += `<form>
     <div class="mb-3">
-    Project Board Name
-    <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
-    </div>
-    <div class="form-group mb-3">
-        <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
-        <textarea class="form-control" id="projectDescription" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">Create Project</button>
+    <label for="exampleInputEmail1" class="form-label" id="boardName">Project board name</label>
+    <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp"
+  </div>
+  <div class="form-group mb-3">
+    <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
+    <textarea class="form-control" id="projectDescription" rows="3"></textarea>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-success">Create Project</button>  
 </form>`
 }
   const app2 = document.querySelector("#app2")
@@ -77,15 +79,15 @@ const formToDom = (packageForm) =>{
 }
 
 formToDom(packageForm)
-const form = document.querySelector("form");
+
 
 const createPackage = (event) =>{
   event.preventDefault();
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.getElementById("projectBoardName").value,
-    info: document.getElementById("projectDescription").value,
+    name: document.getElementById("#projectBoardName").value,
+    info: document.getElementById("#projectDescription").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);

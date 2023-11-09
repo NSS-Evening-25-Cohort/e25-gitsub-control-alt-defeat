@@ -55,6 +55,7 @@ const renderToDom = (packageCards) =>{
 renderToDom(packageCards)
 
 
+
 const formToDom = (packageForm) =>{
 
   let formString = "";
@@ -89,7 +90,6 @@ const createPackage = (event) =>{
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
-  formToDom(packageForm);
   form.reset();
 }
 form.addEventListener("submit", createPackage)

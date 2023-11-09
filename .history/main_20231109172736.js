@@ -52,7 +52,8 @@ const renderToDom = (packageCards) =>{
   const app1 = document.querySelector("#app1")
   app1.innerHTML = domString
 }
-renderToDom(packageCards)
+
+
 
 
 const formToDom = (packageForm) =>{
@@ -76,7 +77,7 @@ const formToDom = (packageForm) =>{
   app2.innerHTML = formString
 }
 
-formToDom(packageForm)
+
 const form = document.querySelector("form");
 
 const createPackage = (event) =>{
@@ -89,7 +90,13 @@ const createPackage = (event) =>{
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);
-  formToDom(packageForm);
   form.reset();
 }
 form.addEventListener("submit", createPackage)
+
+startApp(
+ renderToDom(packageCards);
+ formToDom(packageForm);
+);
+
+startApp();

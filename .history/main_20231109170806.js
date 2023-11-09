@@ -54,6 +54,7 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
+const form = document.querySelector("form");
 
 const formToDom = (packageForm) =>{
 
@@ -64,6 +65,7 @@ const formToDom = (packageForm) =>{
     <div class="mb-3">
     Project Board Name
     <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
+    
     </div>
     <div class="form-group mb-3">
         <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
@@ -77,15 +79,15 @@ const formToDom = (packageForm) =>{
 }
 
 formToDom(packageForm)
-const form = document.querySelector("form");
+
 
 const createPackage = (event) =>{
   event.preventDefault();
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.getElementById("projectBoardName").value,
-    info: document.getElementById("projectDescription").value,
+    name: document.getElementById("#projectBoardName").value,
+    info: document.getElementById("#projectDescription").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);

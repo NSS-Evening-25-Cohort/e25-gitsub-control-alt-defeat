@@ -54,6 +54,7 @@ const renderToDom = (packageCards) =>{
 }
 renderToDom(packageCards)
 
+const form = document.querySelector("form");
 
 const formToDom = (packageForm) =>{
 
@@ -77,15 +78,15 @@ const formToDom = (packageForm) =>{
 }
 
 formToDom(packageForm)
-const form = document.querySelector("form");
+
 
 const createPackage = (event) =>{
   event.preventDefault();
   
   const newPackage = {
     id: packageCards.length +1,
-    name: document.getElementById("projectBoardName").value,
-    info: document.getElementById("projectDescription").value,
+    name: document.getElementById("#projectBoardName").value,
+    info: document.getElementById("#projectDescription").value,
   }
   packageCards.push(newPackage);
   renderToDom(packageCards);

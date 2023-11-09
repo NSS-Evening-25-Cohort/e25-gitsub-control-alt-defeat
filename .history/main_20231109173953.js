@@ -31,7 +31,7 @@ const packageCards =[
   },
 ];
 
-const packageForm =[{}]
+const packageForm =[]
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
 
@@ -75,6 +75,7 @@ const formToDom = (packageForm) =>{
   const app2 = document.querySelector("#app2")
   app2.innerHTML = formString
 }
+
 
 formToDom(packageForm)
 const form = document.querySelector("form");
