@@ -58,3 +58,17 @@ ${user.highlights}
 }
 
 renderSidebar();
+
+const search = (event) => {
+  const eventLC = event.target.value.toLowerCase();
+  const searchResult = referenceList.filter(
+    (item) =>
+      item.title.toLowerCase().includes(eventLC) ||
+      item.author.toLowerCase().includes(eventLC) ||
+      item.description.toLowerCase().includes(eventLC)
+  );
+  // renderCards(searchResult);
+  console.log(eventLC);
+};
+
+document.querySelector("#searchInput").addEventListener("keyup", search);
