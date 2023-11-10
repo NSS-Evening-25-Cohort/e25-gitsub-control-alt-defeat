@@ -101,9 +101,9 @@ const newRepoForm = () => {
   document.querySelector("#repoForm").addEventListener("submit", createRepo);
 };
 
-const startApp = () => {
+const renderRepoPage = () => {
   renderRepo(repos);
   newRepoForm();
 };
 
-startApp();
+renderRepoPage();
