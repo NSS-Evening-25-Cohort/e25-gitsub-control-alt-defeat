@@ -6,12 +6,20 @@ body {
   align-items: center;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
 .headerPlacement {
   margin-top: 1%;
   display: flex;
   justify-content: center;
-  align-self: center;
   width: 75%;
+}
+
+.bi-heart {
+  color: rgb(195, 43, 226);
+  stroke-width: 6;
 }
 
 header {
@@ -20,6 +28,9 @@ header {
   justify-content: center;
   display: flex;
   gap: 5%;
+}
+
+button {
 }
 
 .btn-link {
@@ -83,13 +94,12 @@ h1 {
 .userName {
   width: 75%;
   font-size: large;
-  font-weight: 100;
+  font-weight: 200;
 }
 .tagLine {
   margin-top: 9%;
   width: 75%;
   font-size: 12;
-  font-weight: 100;
 }
 .buttonRowSide {
   margin-top: 6%;
@@ -227,9 +237,10 @@ button img {
 }
 
 .btn-secondary {
-  background-color: dimgray;
+  background-color: rgb(48, 48, 48);
   color: white;
   border-radius: 10px;
+  border: 1px solid rgb(65, 65, 65);
   display: flex;
   align-items: center;
   line-height: 1.1;
