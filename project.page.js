@@ -21,7 +21,7 @@ let projects = [
     updated: "1 minute ago",
   },
 ];
-const startProjectPage = () => {
+const renderProjectPage = () => {
   let app1 = document.querySelector("#app1");
   let app2 = document.querySelector("#app2");
 
@@ -71,4 +71,4 @@ const startProjectPage = () => {
   });
 };
 
-startProjectPage();
+renderProjectPage();

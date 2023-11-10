@@ -15,6 +15,36 @@ let user = {
   sponsors: "",
 };
 
+let pageState = "home";
+
+const homeButton = document.getElementById("home");
+const repoButton = document.getElementById("repositories");
+const projectsButton = document.getElementById("projects");
+const packagesButton = document.getElementById("packages");
+const app1Header = document.getElementById("app1Header");
+const app2Header = document.getElementById("app2Header");
+const app3Header = document.getElementById("app3Header");
+
+homeButton.addEventListener("click", () => {
+  renderRepoPage();
+  pageState = "home";
+});
+
+repoButton.addEventListener("click", () => {
+  renderRepoPage();
+  pageState = "repoPage";
+});
+
+projectsButton.addEventListener("click", () => {
+  renderProjectPage();
+  pageState = "projectPage";
+});
+
+packagesButton.addEventListener("click", () => {
+  renderPackagePage();
+  pageState = "packagePage";
+});
+
 const sidebar = document.getElementById("sidebar");
 
 function renderSidebar() {
@@ -56,9 +86,9 @@ ${user.highlights}
     </div>
   </div>`;
 }
-
 renderSidebar();
 
+//RENDER SEARCH RESULTS
 const searchRenderRepos = (array) => {
   let domString = "";
   array.forEach((card) => {
@@ -113,6 +143,15 @@ const searchRenderPackages = (array) => {
   app3.innerHTML = domString;
 };
 
+function clearSearch() {
+  app1.innerHTML = "";
+  app2.innerHTML = "";
+  app3.innerHTML = "";
+  app1Header.innerHTML = "";
+  app2Header.innerHTML = "";
+  app3Header.innerHTML = "";
+}
+
 const search = (event) => {
   //SEARCH PACKAGES
   const eventLC = event.target.value.toLowerCase();
@@ -136,7 +175,39 @@ const search = (event) => {
   searchRenderRepos(searchResultRepos);
   searchRenderProjects(searchResultProjects);
   searchRenderPackages(searchResultPackage);
+
   //CREATE NEW HEADERS
+  app1Header.innerHTML = "Repositories:";
+  app2Header.innerHTML = "Projects:";
+  app3Header.innerHTML = "Packages:";
+
+  if (eventLC.length === 0) {
+    clearSearch();
+    if (pageState === "home") {
+      renderRepoPage();
+    } else if (pageState === "repoPage") {
+      renderRepoPage();
+    } else if (pageState === "projectPage") {
+      renderProjectPage();
+    } else if (pageState === "packagePage") {
+      renderPackagePage();
+    }
+  }
+  if (searchResultRepos.length === 0) {
+    app1.innerHTML = "Searching...";
+  }
+  if (searchResultProjects.length === 0) {
+    app2.innerHTML = "Searching...";
+    app2.style.height = "auto";
+    app2.style.width = "1000px";
+    app2.style.display = "flex";
+    app2.style.flexDirection = "row";
+    app2.style.alignItems = "center";
+    app2.style.justifyContent = "center";
+  }
+  if (searchResultPackage.length === 0) {
+    app3.innerHTML = "Searching...";
+  }
 };
 
 document.querySelector("#searchInput").addEventListener("keyup", search);

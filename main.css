@@ -9,7 +9,8 @@ body {
 .headerPlacement {
   margin-top: 1%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  align-self: center;
   width: 75%;
 }
 header {
@@ -132,12 +133,13 @@ ul {
   border-bottom: solid 1px rgb(83, 83, 83);
   padding-bottom: 6%;
 }
+
 #app1 {
   color: white;
-  height: 650px;
+  height: auto;
   width: 1000px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -157,13 +159,14 @@ ul {
   height: auto;
   width: 1000px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   overflow: auto;
 }
+
 .footer img {
   width: 16px;
   height: 16px;
@@ -205,4 +208,16 @@ button img {
   display: flex;
   flex-direction: column;
   justify-content: start;
+}
+
+#app1Header {
+  font-size: x-large;
+}
+
+#app2Header {
+  font-size: x-large;
+}
+
+#app3Header {
+  font-size: x-large;
 }
