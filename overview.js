@@ -5,7 +5,7 @@ let user = {
   tagLine:
     "Doing big things and being awesome. Seriously the greatest. Built different.",
   stats: "10mil Followers - 27 following -500",
-  location: "London, Englad",
+  location: "London, England",
   email: "github@tomJones.com",
   website: "https://www.tomjones.com",
   twitter: "@TommyJoJo",
