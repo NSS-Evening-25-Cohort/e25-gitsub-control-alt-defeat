@@ -16,7 +16,6 @@ let user = {
 };
 
 let pageState = "home";
-
 const homeButton = document.getElementById("home");
 const repoButton = document.getElementById("repositories");
 const projectsButton = document.getElementById("projects");
@@ -24,25 +23,30 @@ const packagesButton = document.getElementById("packages");
 const app1Header = document.getElementById("app1Header");
 const app2Header = document.getElementById("app2Header");
 const app3Header = document.getElementById("app3Header");
+app1Header.innerHTML = "Repositories:";
 
 homeButton.addEventListener("click", () => {
   renderRepoPage();
   pageState = "home";
+  app1Header.innerHTML = "Repositories:";
 });
 
 repoButton.addEventListener("click", () => {
   renderRepoPage();
   pageState = "repoPage";
+  app1Header.innerHTML = "Repositories:";
 });
 
 projectsButton.addEventListener("click", () => {
   renderProjectPage();
   pageState = "projectPage";
+  app1Header.innerHTML = "Projects:";
 });
 
 packagesButton.addEventListener("click", () => {
   renderPackagePage();
   pageState = "packagePage";
+  app1Header.innerHTML = "Packages:";
 });
 
 const sidebar = document.getElementById("sidebar");
