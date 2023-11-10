@@ -60,15 +60,26 @@ ${user.highlights}
 renderSidebar();
 
 const search = (event) => {
+  //SEARCH PACKAGES
   const eventLC = event.target.value.toLowerCase();
-  const searchResult = referenceList.filter(
+  const searchResultPackage = packageCards.filter(
+    (item) =>
+      item.name.toLowerCase().includes(eventLC) ||
+      item.info.toLowerCase().includes(eventLC)
+  );
+  const searchResultRepos = repos.filter(
+    (item) =>
+      item.name.toLowerCase().includes(eventLC) ||
+      item.description.toLowerCase().includes(eventLC) ||
+      item.language.toLowerCase().includes(eventLC)
+  );
+  const searchResultProjects = projects.filter(
     (item) =>
       item.title.toLowerCase().includes(eventLC) ||
-      item.author.toLowerCase().includes(eventLC) ||
       item.description.toLowerCase().includes(eventLC)
   );
-  // renderCards(searchResult);
-  console.log(eventLC);
 };
 
 document.querySelector("#searchInput").addEventListener("keyup", search);
+
+function rednerSearchResults() {}

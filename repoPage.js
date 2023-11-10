@@ -1,4 +1,4 @@
-const cards = [
+const repos = [
   {
     id: 1,
     name: "Hackbeard the Digital Marauder",
@@ -76,18 +76,18 @@ const renderRepo = (array) => {
     </div>`;
   });
   console.log(domString);
-  renderToDom("#app2", domString);
+  renderToDom("#app1", domString);
 };
 
 const createRepo = (e) => {
   e.preventDefault();
   const newRepo = {
-    id: cards.length + 1,
+    id: repos.length + 1,
     name: document.getElementById("repo-name").value,
     description: document.getElementById("description").value,
   };
-  cards.push(newRepo);
-  renderRepo(cards);
+  repos.push(newRepo);
+  renderRepo(repos);
 };
 
 const newRepoForm = () => {
@@ -98,12 +98,12 @@ const newRepoForm = () => {
     <input type="text" class="form-control" id="description" >
     <button type="submit" class="btn btn-primary">Create Repo</button>
   </form>`;
-  renderToDom("#app1", domString);
+  renderToDom("#app2", domString);
   document.querySelector("#repoForm").addEventListener("submit", createRepo);
 };
 
 const startApp = () => {
-  renderRepo(cards);
+  renderRepo(repos);
   newRepoForm();
 };
 
