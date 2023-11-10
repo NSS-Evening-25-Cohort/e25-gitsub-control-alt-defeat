@@ -1,4 +1,4 @@
-const packageCards = [
+const packageCards =[
   {
     id: 1,
     name: "Ahoy",
@@ -31,33 +31,30 @@ const packageCards = [
   },
 ];
 
-const packageForm =[{}]
+const packageForm =[]
 const app1 = document.querySelector("#app1");
 const app2 = document.querySelector("#app2");
 
-const renderToDom = (packageCards) => {
-  let domString = "";
+const renderToDom = (packageCards) =>{
 
+  let domString = "";
 
   for(let card of packageCards){
     
     domString += `<div class="card" style="width: 18rem;">
-
-  for (let card of packageCards) {
-    domString += `<div class="card">
-
     <div class="card-body"> 
       <h5 class="cardHeader">${card.name}</h5>
       <p class="card-text">${card.info}</p>
       <button type="button" class="btn btn-secondary">Learn More</button>
     </div>
-  </div>`;
+  </div>`
   }
-  const app1 = document.querySelector("#app1");
-  app1.innerHTML = domString;
-};
-renderToDom(packageCards);
+  const app1 = document.querySelector("#app1")
+  app1.innerHTML = domString
+}
+renderToDom(packageCards)
 
+const form = document.querySelector("form");
 
 const formToDom = (packageForm) =>{
 
@@ -66,14 +63,15 @@ const formToDom = (packageForm) =>{
   for(let form of packageForm){
     formString += `<form>
     <div class="mb-3">
-    Project Board Name
-    <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
-    </div>
-    <div class="form-group mb-3">
-        <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
-        <textarea class="form-control" id="projectDescription" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">Create Project</button>
+    <label for="exampleInputEmail1" class="form-label" id="boardName">Project board name</label>
+    <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp"
+  </div>
+  <div class="form-group mb-3">
+    <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
+    <textarea class="form-control" id="projectDescription" rows="3"></textarea>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-success">Create Project</button>  
 </form>`
 }
   const app2 = document.querySelector("#app2")
@@ -81,31 +79,19 @@ const formToDom = (packageForm) =>{
 }
 
 formToDom(packageForm)
-const form = document.querySelector("form");
 
-const createPackage = (event) => {
+
+const createPackage = (event) =>{
   event.preventDefault();
-
+  
   const newPackage = {
-
     id: packageCards.length +1,
-    name: document.getElementById("projectBoardName").value,
-    info: document.getElementById("projectDescription").value,
+    name: document.getElementById("#projectBoardName").value,
+    info: document.getElementById("#projectDescription").value,
   }
-
-    id: packageCards.length + 1,
-    name: document.querySelector("#projectBoardName").value,
-    info: document.querySelector("#projectDescription").value,
-  };
-
   packageCards.push(newPackage);
   renderToDom(packageCards);
   formToDom(packageForm);
   form.reset();
-
 }
 form.addEventListener("submit", createPackage)
-
-};
-form.addEventListener("submit", createPackage);
-
