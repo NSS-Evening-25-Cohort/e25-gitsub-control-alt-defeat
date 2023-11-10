@@ -1,4 +1,4 @@
-const startAppPackages =() =>{
+const startApp =() =>{
 
 const packageCards =[
   {
@@ -97,4 +97,4 @@ const createPackage = (event) =>{
 form.addEventListener("submit", createPackage)
 }
 
-startAppPackages();
+startApp();
