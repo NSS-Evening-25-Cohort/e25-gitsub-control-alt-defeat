@@ -227,17 +227,16 @@ button img {
 }
 
 .footerM {
-  width: fit-content;
+  width: 1250px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3%;
+  gap: 2.5%;
   border-top: solid 1px rgb(83, 83, 83);
 }
 
 .footerCenter {
-  padding: 3%;
   border: none;
 }
 
