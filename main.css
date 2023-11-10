@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font: verdana;
 }
 
 a {
@@ -12,8 +13,8 @@ a {
 }
 .headerPlacement {
   margin-top: 1%;
-  display: flex;
-  justify-content: center;
+  display: block;
+  justify-content: left;
   width: 75%;
 }
 
@@ -23,18 +24,17 @@ a {
 }
 
 header {
-  height: 3rem;
-  width: 65%;
-  justify-content: center;
+  width: 75%;
   display: flex;
-  gap: 5%;
-}
-
-button {
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(83, 83, 83);
+  padding-bottom: 2.5%;
 }
 
 .btn-link {
   text-decoration: none;
+  border-radius: 0%;
+  padding-bottom: 2.5%;
 }
 
 #app1Header {
@@ -51,16 +51,27 @@ button {
 
 #searchBar {
   background: transparent;
-  margin-top: 1%;
-  width: 350px;
+  margin-top: 4%;
+  width: 75%;
   gap: 1%;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
 
+#searchInput {
+  border-color: rgb(83, 83, 83);
+  color: white;
+  background-color: black;
+  box-shadow: none;
+}
+
 .btn-link {
   color: aliceblue;
+}
+
+.btn-link:hover {
+  color: rgb(177, 177, 177);
 }
 
 #sidebar {
@@ -69,7 +80,8 @@ button {
   flex-direction: column;
   align-items: center;
   float: left;
-  margin-right: 8%;
+  margin-top: 3%;
+  margin-right: 5%;
   width: 400px;
 }
 
@@ -161,27 +173,28 @@ ul {
 #app1 {
   color: white;
   height: auto;
-  width: 1000px;
+  width: 885px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
   overflow: auto;
+  margin-top: 2.5%;
 }
 
 #app2 {
   color: white;
   margin-top: 5%;
   height: auto;
-  width: 1000px;
+  width: 885px;
 }
 
 #app3 {
   color: white;
   height: auto;
-  width: 1000px;
+  width: 885px;
   display: flex;
   flex-direction: row;
   align-items: center;
