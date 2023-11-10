@@ -23,6 +23,7 @@ const packagesButton = document.getElementById("packages");
 const app1Header = document.getElementById("app1Header");
 const app2Header = document.getElementById("app2Header");
 const app3Header = document.getElementById("app3Header");
+const sidebar = document.getElementById("sidebar");
 app1Header.innerHTML = "Repositories:";
 
 homeButton.addEventListener("click", () => {
@@ -48,8 +49,6 @@ packagesButton.addEventListener("click", () => {
   pageState = "packagePage";
   app1Header.innerHTML = "Packages:";
 });
-
-const sidebar = document.getElementById("sidebar");
 
 function renderSidebar() {
   sidebar.innerHTML = `
@@ -147,14 +146,23 @@ const searchRenderPackages = (array) => {
   app3.innerHTML = domString;
 };
 
-function clearSearch() {
+const clearSearch = () => {
   app1.innerHTML = "";
   app2.innerHTML = "";
   app3.innerHTML = "";
   app1Header.innerHTML = "";
   app2Header.innerHTML = "";
   app3Header.innerHTML = "";
-}
+  app1.style.borderBottom = "none";
+  app1.style.marginBottom = "none";
+  app1.style.paddingBottom = "none";
+  app2.style.borderBottom = "none";
+  app2.style.marginBottom = "none";
+  app2.style.paddingBottom = "none";
+  app3.style.borderBottom = "none";
+  app3.style.marginBottom = "none";
+  app3.style.paddingBottom = "none";
+};
 
 const search = (event) => {
   //SEARCH PACKAGES
@@ -184,6 +192,17 @@ const search = (event) => {
   app1Header.innerHTML = "Repositories:";
   app2Header.innerHTML = "Projects:";
   app3Header.innerHTML = "Packages:";
+
+  //ADD DIVIDERS TO DIV ELEMENTS
+  app1.style.borderBottom = "solid 1px rgb(83, 83, 83)";
+  app1.style.marginBottom = "2%";
+  app1.style.paddingBottom = "2%";
+  app2.style.borderBottom = "solid 1px rgb(83, 83, 83)";
+  app2.style.marginBottom = "2%";
+  app2.style.paddingBottom = "2%";
+  app3.style.borderBottom = "solid 1px rgb(83, 83, 83)";
+  app3.style.marginBottom = "2%";
+  app3.style.paddingBottom = "2%";
 
   if (eventLC.length === 0) {
     clearSearch();

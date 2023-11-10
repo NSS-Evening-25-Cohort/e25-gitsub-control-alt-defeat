@@ -41,7 +41,7 @@ header {
 #searchBar {
   background: transparent;
   margin-top: 1%;
-  width: 30%;
+  width: 350px;
   gap: 1%;
   display: flex;
   justify-content: center;
@@ -196,6 +196,7 @@ button img {
   height: 16px;
 }
 .footerPlacement {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,6 +204,7 @@ button img {
 }
 
 .footerM {
+  width: fit-content;
   color: white;
   display: flex;
   justify-content: center;
