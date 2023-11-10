@@ -148,14 +148,13 @@ ul {
 #app2 {
   color: white;
   margin-top: 5%;
-  border: solid 1px white;
-  height: 650px;
+  height: auto;
   width: 1000px;
 }
 
 #app3 {
   color: white;
-  height: 650px;
+  height: auto;
   width: 1000px;
   display: flex;
   flex-direction: column;

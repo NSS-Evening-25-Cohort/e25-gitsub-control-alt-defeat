@@ -75,7 +75,6 @@ const renderRepo = (array) => {
       </button>
     </div>`;
   });
-  console.log(domString);
   renderToDom("#app1", domString);
 };
 

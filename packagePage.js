@@ -1,4 +1,4 @@
-const packageCards = [
+const packages = [
   {
     id: 1,
     name: "Ahoy",
@@ -31,32 +31,34 @@ const packageCards = [
   },
 ];
 
-const packageForm = [{}];
-const app1 = document.querySelector("#app1");
-const app2 = document.querySelector("#app2");
+function RenderPackagePage() {
+  const packageForm = [{}];
+  const app1 = document.querySelector("#app1");
+  const app2 = document.querySelector("#app2");
 
-const renderToDom = (packageCards) => {
-  let domString = "";
+  const renderToDom = (packages) => {
+    let domString = "";
 
-  for (let card of packageCards) {
-    domString += `<div class="card" style="width: 18rem;">
+    for (let card of packages) {
+      domString += `<div class="card" style="width: 18rem;">
   <div class="card-body"> 
     <h5 class="cardHeader">${card.name}</h5>
     <p class="card-text">${card.info}</p>
     <button type="button" class="btn btn-secondary">Learn More</button>
   </div>
 </div>`;
-  }
-  const app1 = document.querySelector("#app1");
-  app1.innerHTML = domString;
-};
-renderToDom(packageCards);
+    }
+    const app1 = document.querySelector("#app1");
+    app1.innerHTML = domString;
+  };
 
-const formToDom = (packageForm) => {
-  let formString = "";
+  renderToDom(packages);
 
-  for (let form of packageForm) {
-    formString += `<form>
+  const formToDom = (packageForm) => {
+    let formString = "";
+
+    for (let form of packageForm) {
+      formString += `<form>
   <div class="mb-3">
   Project Board Name
   <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
@@ -67,26 +69,28 @@ const formToDom = (packageForm) => {
     </div>
     <button type="submit" class="btn btn-success">Create Project</button>
 </form>`;
-  }
-  const app2 = document.querySelector("#app2");
-  app2.innerHTML = formString;
-};
-
-formToDom(packageForm);
-const form = document.querySelector("form");
-
-const createPackage = (event) => {
-  event.preventDefault();
-
-  const newPackage = {
-    id: packageCards.length + 1,
-    name: document.getElementById("projectBoardName").value,
-    info: document.getElementById("projectDescription").value,
+    }
+    const app2 = document.querySelector("#app2");
+    app2.innerHTML = formString;
   };
-  packageCards.push(newPackage);
-  renderToDom(packageCards);
-  formToDom(packageForm);
-  form.reset();
-};
 
-form.addEventListener("submit", createPackage);
+  formToDom(packageForm);
+  const form = document.querySelector("form");
+
+  const createPackage = (event) => {
+    event.preventDefault();
+
+    const newPackage = {
+      id: packages.length + 1,
+      name: document.getElementById("projectBoardName").value,
+      info: document.getElementById("projectDescription").value,
+    };
+    packages.push(newPackage);
+    renderToDom(packages);
+    form.reset();
+  };
+
+  form.addEventListener("submit", createPackage);
+}
+
+RenderPackagePage();

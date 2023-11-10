@@ -59,13 +59,67 @@ ${user.highlights}
 
 renderSidebar();
 
+const searchRenderRepos = (array) => {
+  let domString = "";
+  array.forEach((card) => {
+    domString += `<div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">${card.name}</h5>
+        <p class="card-text">${card.description}</p>
+        <div class="footer">
+          <p class="keys">${card.keys}</p>
+          <p class="language"><img src="https://www.vhv.rs/dpng/d/443-4431349_yellow-circle-png-transparent-png-download.png" alt="Language" /> ${card.language}</p>
+          <p class="favorite"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Star_Outline.svg/2144px-Star_Outline.svg.png" alt="favorite" />${card.favorite}</p>
+          <p class="forks"><img src="https://www.svgrepo.com/show/326651/git-branch-outline.svg" alt="forks" />${card.forks}</p>
+          <p class="issues">Issues: ${card.issues}</p>
+          <p class="updates">${card.updates}</p>
+        </div>
+      </div>
+      <button type="button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Star_Outline.svg/2144px-Star_Outline.svg.png" alt="favorite"> Star
+      </button>
+    </div>`;
+  });
+  document.getElementById("app1").innerHTML = domString;
+};
+
+const searchRenderProjects = (array) => {
+  let list = [];
+  for (object of array) {
+    let newItem = `<div class="container">
+      <div class="row-4">
+        <div class="col-3">${object.title}</div>
+        <div class="col-3">${object.description}</div>
+      </div>
+    </div>`;
+    list += newItem;
+  }
+  app2.innerHTML = list;
+};
+
+const searchRenderPackages = (array) => {
+  let domString = "";
+
+  for (let card of array) {
+    domString += `<div class="card" style="width: 18rem;">
+<div class="card-body"> 
+  <h5 class="cardHeader">${card.name}</h5>
+  <p class="card-text">${card.info}</p>
+  <button type="button" class="btn btn-secondary">Learn More</button>
+</div>
+</div>`;
+  }
+  const app3 = document.getElementById("app3");
+  app3.innerHTML = domString;
+};
+
 const search = (event) => {
   //SEARCH PACKAGES
   const eventLC = event.target.value.toLowerCase();
-  const searchResultPackage = packageCards.filter(
+  const searchResultProjects = projects.filter(
     (item) =>
-      item.name.toLowerCase().includes(eventLC) ||
-      item.info.toLowerCase().includes(eventLC)
+      item.title.toLowerCase().includes(eventLC) ||
+      item.description.toLowerCase().includes(eventLC)
   );
   const searchResultRepos = repos.filter(
     (item) =>
@@ -73,13 +127,16 @@ const search = (event) => {
       item.description.toLowerCase().includes(eventLC) ||
       item.language.toLowerCase().includes(eventLC)
   );
-  const searchResultProjects = projects.filter(
+  const searchResultPackage = packages.filter(
     (item) =>
-      item.title.toLowerCase().includes(eventLC) ||
-      item.description.toLowerCase().includes(eventLC)
+      item.name.toLowerCase().includes(eventLC) ||
+      item.info.toLowerCase().includes(eventLC)
   );
+  //RENDER RESULTS
+  searchRenderRepos(searchResultRepos);
+  searchRenderProjects(searchResultProjects);
+  searchRenderPackages(searchResultPackage);
+  //CREATE NEW HEADERS
 };
 
 document.querySelector("#searchInput").addEventListener("keyup", search);
-
-function rednerSearchResults() {}
