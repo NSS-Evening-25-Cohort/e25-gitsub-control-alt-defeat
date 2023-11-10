@@ -1,0 +1,11 @@
+/* .listItem-breakpoints: {
+  sm: 480px,
+
+}
+.container-max-widths: (
+  sm: 420px,
+); */
+.listItem {
+  display: grid;
+  
+}
