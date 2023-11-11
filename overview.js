@@ -61,43 +61,6 @@ const overviewPage = () => {
     sponsors: "",
   };
 
-  const projectsIcon = `              <svg
-xmlns="http://www.w3.org/2000/svg"
-width="16"
-height="16"
-fill="currentColor"
-class="bi bi-bar-chart"
-viewBox="0 0 16 16"
->
-<path
-  d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"
-/>
-</svg>`;
-  const reposIcon = `              <svg
-xmlns="http://www.w3.org/2000/svg"
-width="16"
-height="16"
-fill="currentColor"
-class="bi bi-pc-display-horizontal"
-viewBox="0 0 16 16"
->
-<path
-  d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"
-/>
-</svg>`;
-  const packagesIcon = `              <svg
-xmlns="http://www.w3.org/2000/svg"
-width="16"
-height="16"
-fill="currentColor"
-class="bi bi-box"
-viewBox="0 0 16 16"
->
-<path
-  d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"
-/>
-</svg>`;
-
   let pageState = "home";
   const homeButton = document.getElementById("home");
   const repoButton = document.getElementById("repositories");
@@ -112,21 +75,18 @@ viewBox="0 0 16 16"
   homeButton.addEventListener("click", () => {
     renderRepoPage();
     pageState = "home";
-    app1Header.innerHTML = reposIcon + " Repositories:";
     showPageState();
   });
 
   repoButton.addEventListener("click", () => {
     renderRepoPage();
     pageState = "repoPage";
-    app1Header.innerHTML = reposIcon + " Repositories:";
     showPageState();
   });
 
   projectsButton.addEventListener("click", () => {
     renderProjectPage();
     pageState = "projectPage";
-    app1Header.innerHTML = projectsIcon + " Projects:";
     showPageState();
   });
 
@@ -136,20 +96,20 @@ viewBox="0 0 16 16"
     app1Header.innerHTML = packagesIcon + " Packages:";
     showPageState();
   });
-
+  const addBorder = "1px solid rgb(255, 148, 244)";
   const showPageState = () => {
     if (pageState === "home") {
-      homeButton.style.borderBottom = "1px solid rgb(255, 148, 244)";
+      homeButton.style.borderBottom = addBorder;
     } else {
       homeButton.style.borderBottom = "none";
     }
     if (pageState === "repoPage") {
-      repoButton.style.borderBottom = "1px solid rgb(255, 148, 244)";
+      repoButton.style.borderBottom = addBorder;
     } else {
       repoButton.style.borderBottom = "none";
     }
     if (pageState === "projectPage") {
-      projectsButton.style.borderBottom = "1px solid rgb(255, 148, 244)";
+      projectsButton.style.borderBottom = addBorder;
     } else {
       projectsButton.style.borderBottom = "none";
     }
@@ -257,22 +217,15 @@ ${user.highlights}
   };
 
   const clearSearch = () => {
-    app1.style.justifyContent = "space-between";
+    app1.removeAttribute("style");
     app1.innerHTML = "";
     app2.innerHTML = "";
     app3.innerHTML = "";
     app1Header.innerHTML = "";
     app2Header.innerHTML = "";
     app3Header.innerHTML = "";
-    app1.style.borderBottom = "none";
-    app1.style.marginBottom = "none";
-    app1.style.paddingBottom = "none";
-    app2.style.borderBottom = "none";
-    app2.style.marginBottom = "none";
-    app2.style.paddingBottom = "none";
-    app3.style.borderBottom = "none";
-    app3.style.marginBottom = "none";
-    app3.style.paddingBottom = "none";
+    app2.removeAttribute("style");
+    app3.removeAttribute("style");
   };
 
   //SEARCH FUNCTION
@@ -302,19 +255,16 @@ ${user.highlights}
 
     //CREATE NEW HEADERS
     app1Header.innerHTML = reposIcon + " Repositories:";
-    app2Header.innerHTML = packagesIcon + " Projects:";
-    app3Header.innerHTML = projectsIcon + " Packages:";
+    app2Header.innerHTML = projectsIcon + " Projects:";
+    app3Header.innerHTML = packagesIcon + " Packages:";
+
+    const addDivider =
+      "border-bottom:solid 1px rgb(83, 83, 83); margin-bottom:2%; padding-bottom:2%";
 
     //ADD DIVIDERS TO DIV ELEMENTS
-    app1.style.borderBottom = "solid 1px rgb(83, 83, 83)";
-    app1.style.marginBottom = "2%";
-    app1.style.paddingBottom = "2%";
-    app2.style.borderBottom = "solid 1px rgb(83, 83, 83)";
-    app2.style.marginBottom = "2%";
-    app2.style.paddingBottom = "2%";
-    app3.style.borderBottom = "solid 1px rgb(83, 83, 83)";
-    app3.style.marginBottom = "2%";
-    app3.style.paddingBottom = "2%";
+    app1.setAttribute("style", addDivider);
+    app2.setAttribute("style", addDivider);
+    app3.setAttribute("style", addDivider);
 
     if (eventLC.length === 0) {
       clearSearch();

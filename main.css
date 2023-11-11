@@ -173,7 +173,7 @@ ul {
 #app1 {
   color: white;
   height: auto;
-  width: 885px;
+  width: 950px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -182,19 +182,20 @@ ul {
   gap: 10px;
   overflow: auto;
   margin-top: 2.5%;
+  max-height: 900px;
 }
 
 #app2 {
   color: white;
   margin-top: 5%;
   height: auto;
-  width: 885px;
+  width: 950px;
 }
 
 #app3 {
   color: white;
   height: auto;
-  width: 885px;
+  width: 950px;
   display: flex;
   flex-direction: row;
   align-items: center;
