@@ -116,7 +116,7 @@ ul {
 }
 #app1 {
   color: white;
-  /* border: solid 1px white; */
+  border: solid 1px white;
   height: 650px;
   width: 1000px;
   display: flex;
@@ -169,9 +169,4 @@ button img {
   display: flex;
   align-items: center;
   line-height: 1.1;
-}
-#form {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
 }
