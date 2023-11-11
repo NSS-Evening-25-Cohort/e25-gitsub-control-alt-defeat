@@ -45,7 +45,7 @@ const packages = [
 ];
 
 function renderPackagePage() {
-  const packageForm = [{}];
+  const packageForm = [];
   const app1 = document.querySelector("#app1");
   const app2 = document.querySelector("#app2");
   app1Header.innerHTML = packagesIcon + " Packages:";
@@ -56,7 +56,7 @@ function renderPackagePage() {
     for (let card of packages) {
       domString += `<div class="card" style="width: 18rem;">
   <div class="card-body"> 
-  <button id="deletecard -- ${card.id}" type="button" class="btn-close" aria-label="Close"></button>
+  <button id="deletecard--${card.id}" type="button" class="btn-close" aria-label="Close"></button>
     <h5 class="cardHeader">${card.name}</h5>
     <p class="card-text">${card.info}</p>
     <button type="button" class="btn btn-secondary">Learn More</button>
@@ -69,11 +69,9 @@ function renderPackagePage() {
  
   renderToDom(packages);
 
-
-
   app1.addEventListener('click', (event) => {
     if (event.target.id.includes("deletecard")){
-      const [ ,id] = event.target.id.split("--");
+      const [ , id] = event.target.id.split("--");
       const index = packages.findIndex(event => event.id === Number(id));
       packages.splice(index, 1);
       renderToDom(packages);
