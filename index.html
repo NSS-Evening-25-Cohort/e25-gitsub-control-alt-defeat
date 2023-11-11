@@ -7,58 +7,163 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
+<<<<<<< HEAD
     <link id="js2" rel="stylesheet" href="js2main.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="project.page.css" />
     <title>Document</title>
+=======
+
+    <link rel="stylesheet" href="js2main.css" />
+
+    <link rel="stylesheet" href="main.css" />
+    <title>Git Hubby</title>
+>>>>>>> 9b873729eb62b7274916c1c36c0672924c7ea74d
   </head>
   <body>
-    <div class="headerPlacement">
-      <header>
-        <button>Overview</button>
-        <button>Repositories</button>
-        <button>Projects</button>
-        <button>Packages</button>
-      </header>
-    </div>
     <div class="appContainer">
       <div id="sidebar"></div>
       <div class="app">
+        <div class="headerPlacement">
+          <header>
+            <button class="btn btn-link" id="home">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-book"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"
+                />
+              </svg>
+              Overview
+            </button>
+            <button class="btn btn-link" id="repositories">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-pc-display-horizontal"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"
+                />
+              </svg>
+              Repositories
+            </button>
+            <button class="btn btn-link" id="projects">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bar-chart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"
+                />
+              </svg>
+              Projects
+            </button>
+            <button class="btn btn-link" id="packages">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"
+                />
+              </svg>
+              Packages
+            </button>
+          </header>
+          <div id="searchBar">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="searchInput"
+                placeholder="SEARCH"
+              />
+              <label for="searchInput">Search</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="app1Header"></div>
         <div id="app1">app1</div>
+        <div id="app2Header"></div>
         <div id="app2">app2</div>
+        <div id="app3Header"></div>
+        <div id="app3"></div>
       </div>
     </div>
     <div class="footerPlacement">
-      <div class="footer">
-        <div class="footerLeft">footerLeft</div>
-        <div class="footerCenter">footerCenter</div>
-        <div class="footerRight">footerRight</div>
+      <div class="footerM">
+        <div class="footerM footerLeft">
+          <button class="btn btn-link" id="home">Terms</button>
+        </div>
+        <div class="footerM footerLeft">
+          <button class="btn btn-link" id="home">Privacy</button>
+        </div>
+        <div class="footerM footerLeft">
+          <button class="btn btn-link" id="home">Security</button>
+        </div>
+        <div class="footerM footerLeft">
+          <button class="btn btn-link" id="home">Status</button>
+        </div>
+        <div class="footerM footerLeft">
+          <button class="btn btn-link" id="home">Help</button>
+        </div>
+        <div class="footerM footerCenter">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-android2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m10.213 1.471.691-1.26c.046-.083.03-.147-.048-.192-.085-.038-.15-.019-.195.058l-.7 1.27A4.832 4.832 0 0 0 8.005.941c-.688 0-1.34.135-1.956.404l-.7-1.27C5.303 0 5.239-.018 5.154.02c-.078.046-.094.11-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.697 3.697 0 0 0 3.5 5.02h9c0-.75-.208-1.44-.623-2.072a4.266 4.266 0 0 0-1.664-1.476ZM6.22 3.303a.367.367 0 0 1-.267.11.35.35 0 0 1-.263-.11.366.366 0 0 1-.107-.264.37.37 0 0 1 .107-.265.351.351 0 0 1 .263-.11c.103 0 .193.037.267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264Zm4.101 0a.351.351 0 0 1-.262.11.366.366 0 0 1-.268-.11.358.358 0 0 1-.112-.264c0-.103.037-.191.112-.265a.367.367 0 0 1 .268-.11c.104 0 .19.037.262.11a.367.367 0 0 1 .107.265c0 .102-.035.19-.107.264ZM3.5 11.77c0 .294.104.544.311.75.208.204.46.307.76.307h.758l.01 2.182c0 .276.097.51.292.703a.961.961 0 0 0 .7.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182c0 .276.097.51.292.703a.972.972 0 0 0 .71.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76c.291 0 .54-.103.749-.308.207-.205.311-.455.311-.75V5.365h-9v6.404Zm10.495-6.587a.983.983 0 0 0-.702.278.91.91 0 0 0-.293.685v4.063c0 .271.098.501.293.69a.97.97 0 0 0 .702.284c.28 0 .517-.095.712-.284a.924.924 0 0 0 .293-.69V6.146a.91.91 0 0 0-.293-.685.995.995 0 0 0-.712-.278Zm-12.702.283a.985.985 0 0 1 .712-.283c.273 0 .507.094.702.283a.913.913 0 0 1 .293.68v4.063a.932.932 0 0 1-.288.69.97.97 0 0 1-.707.284.986.986 0 0 1-.712-.284.924.924 0 0 1-.293-.69V6.146c0-.264.098-.491.293-.68Z"
+            />
+          </svg>
+        </div>
+        <div class="footerM footerRight">
+          <button class="btn btn-link" id="home">Contact GitHub</button>
+        </div>
+        <div class="footerM footerRight">
+          <button class="btn btn-link" id="home">Pricing</button>
+        </div>
+        <div class="footerM footerRight">
+          <button class="btn btn-link" id="home">API</button>
+        </div>
+        <div class="footerM footerRight">
+          <button class="btn btn-link" id="home">Training</button>
+        </div>
+        <div class="footerM footerRight">
+          <button class="btn btn-link" id="home">Blog</button>
+        </div>
+        <div class="footerM footerRight">
+          <button class="btn btn-link" id="home">About</button>
+        </div>
       </div>
     </div>
-    <!-- <div class="packageHeader">
-      <h3>Create a new project</h3>
-      <p>
-        Coordinate,track,and update your work in one place, so projects stay
-        transparent and on schedule.
-      </p>
-    </div> -->
 
-    <!-- <form>
-        <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" id="boardName">Project board name</label>
-        <input type="text" class="form-control" class="packageForm" id="projectBoardName" aria-describedby="emailHelp">
-      </div>
-      <div class="form-group mb-3">
-        <label for="exampleFormControlTextarea1" id="descriptionName" class="packageForm">Description<i>(Optional)</i></label>
-        <textarea class="form-control" id="projectDescription" rows="3"></textarea>
-      </div>
-      </div>
-      <button type="submit" class="btn btn-success">Create Project</button>  
-    </form> -->
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="main.js"></script>
-    <script src="repoPage.js"></script>
-    <script src="overview.js"></script> -->
     <script src="project.page.js"></script>
+    <script src="packagePage.js"></script>
+    <script src="repoPage.js"></script>
+    <script src="overview.js"></script>
   </body>
 </html>
