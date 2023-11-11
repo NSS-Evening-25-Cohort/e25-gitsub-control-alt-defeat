@@ -77,8 +77,8 @@ const renderRepo = (array) => {
         <div class="footer">
           <p class="keys">${card.keys}</p>
           <p class="language"><img src="https://www.vhv.rs/dpng/d/443-4431349_yellow-circle-png-transparent-png-download.png" alt="Language" /> ${card.language}</p>
-          <p class="favorite"><img src="./images/whiteStar.png" alt="favorite" />${card.favorite}</p>
-          <p class="forks"><img src="./images/whiteForkIcon.png" alt="forks" />${card.forks}</p>
+          <p class="favorite"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Star_Outline.svg/2144px-Star_Outline.svg.png" alt="favorite" />${card.favorite}</p>
+          <p class="forks"><img src="https://www.svgrepo.com/show/326651/git-branch-outline.svg" alt="forks" />${card.forks}</p>
           <p class="issues">Issues: ${card.issues}</p>
           <p class="updates">${card.updates}</p>
         </div>
@@ -99,8 +99,7 @@ const createRepo = (e) => {
     description: document.getElementById("description").value,
     favorite: 0,
     forks: 0,
-    issues: 0,
-    updates: "Updated just now",
+    
   };
   repos.push(newRepo);
   renderRepo(repos);
@@ -137,6 +136,7 @@ const incrementFavorite = (id) => {
     addFavoriteEventListener();
   }
 };
+
 
 const renderRepoPage = () => {
   app1Header.innerHTML = reposIcon + " Repositories:";
