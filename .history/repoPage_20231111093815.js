@@ -43,19 +43,19 @@ const repos = [
       'Captain CyberSails steers the Silicon Scallywag, a digital ship with a virtual reality deck where he develops "The Sea of Codes," a virtual oceanic world where coders can navigate through complex algorithms and engage in hackathons as if they were epic sea battles.',
     keys: "netlify",
     language: "javascript",
-    favorite: 89,
+    favorite: "89",
     forks: 12,
     issues: 2,
     updates: "Updated 100 days ago",
   },
   {
-    id: 4,
+    id: 2,
     name: "Anne Rack-It, the Data Plunderer",
     description:
       'Anne Rack-It, the Data Plunderer, captains the Query Queen, a sleek and fast database ship that uses her famed "Cache & Conquer" technique to optimize data retrieval, making her the most feared and respected data pirate on the high info-seas.',
     keys: "netlify",
     language: "javascript",
-    favorite: 109234,
+    favorite: "109,234",
     forks: 12,
     issues: 2,
     updates: "Updated 10 days ago",
@@ -132,8 +132,7 @@ const incrementFavorite = (id) => {
     renderRepo(repos);
     addFavoriteEventListener();
   }
-};
-
+}
 
 const renderRepoPage = () => {
   app1Header.innerHTML = reposIcon + " Repositories:";
