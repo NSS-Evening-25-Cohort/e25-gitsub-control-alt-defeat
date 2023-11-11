@@ -19,7 +19,7 @@
 .card {
   background-color: transparent;
   color: dimgray;
-  overflow: visible;
+  height: 325px;
   width: 300px;
 }
 
@@ -30,7 +30,7 @@
 .form-control {
   background-color: transparent;
 }
-.cardHeader {
+.card Header {
   color: antiquewhite;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
