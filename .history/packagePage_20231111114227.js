@@ -56,7 +56,7 @@ function renderPackagePage() {
     for (let card of packages) {
       domString += `<div class="card" style="width: 18rem;">
   <div class="card-body"> 
-  <button id="deletecard -- ${card.id}" type="button" class="btn-close" aria-label="Close"></button>
+  <button id="deletecard--${card.id}" type="button" class="btn-close" aria-label="Close"></button>
     <h5 class="cardHeader">${card.name}</h5>
     <p class="card-text">${card.info}</p>
     <button type="button" class="btn btn-secondary">Learn More</button>
@@ -73,6 +73,7 @@ function renderPackagePage() {
     if (event.target.id.includes("deletecard")){
       const [ ,id] = event.target.id.split("--");
       const index = packages.findIndex(event => event.id === Number(id));
+      console.log(id)
       packages.splice(index, 1);
       renderToDom(packages);
     }

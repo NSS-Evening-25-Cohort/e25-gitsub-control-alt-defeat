@@ -19,7 +19,7 @@
 .card {
   background-color: transparent;
   color: dimgray;
-  height: 325px;
+  height: 300px;
   width: 300px;
 }
 
@@ -36,16 +36,8 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
-
 .btn-close{
-  background-color:darkred;
-  margin-left: 238px;
-  width: 15px !important;
-  height: 15px !important;
-  border: transparent solid 1px;
-  border-radius: 25px;
-
-body {
-background-color: aliceblue;
-
+  background-color:red;
+  margin-right: 150px;
+  width: 50px !important;
 }
