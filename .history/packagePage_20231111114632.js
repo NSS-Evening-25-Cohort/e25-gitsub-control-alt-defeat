@@ -69,8 +69,6 @@ function renderPackagePage() {
  
   renderToDom(packages);
 
-
-
   app1.addEventListener('click', (event) => {
     if (event.target.id.includes("deletecard")){
       const [ ,id] = event.target.id.split("--");
