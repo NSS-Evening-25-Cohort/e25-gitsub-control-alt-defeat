@@ -66,15 +66,13 @@ function renderPackagePage() {
     const app1 = document.querySelector("#app1");
     app1.innerHTML = domString;
   };
- 
+
   renderToDom(packages);
 
-
-
-  app1.addEventListener('click', (event) => {
-    if (event.target.id.includes("deletecard")){
-      const [ ,id] = event.target.id.split("--");
-      const index = packages.findIndex(event => event.id === Number(id));
+  app1.addEventListener("click", (event) => {
+    if (event.target.id.includes("deletecard")) {
+      const [, id] = event.target.id.split("--");
+      const index = packages.findIndex((event) => event.id === Number(id));
       packages.splice(index, 1);
       renderToDom(packages);
     }
@@ -117,6 +115,4 @@ function renderPackagePage() {
   };
 
   form.addEventListener("submit", createPackage);
-  
 }
-renderPackagePage();
