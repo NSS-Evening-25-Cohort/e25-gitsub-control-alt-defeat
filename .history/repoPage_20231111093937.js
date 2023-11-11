@@ -49,13 +49,13 @@ const repos = [
     updates: "Updated 100 days ago",
   },
   {
-    id: 4,
+    id: 2,
     name: "Anne Rack-It, the Data Plunderer",
     description:
       'Anne Rack-It, the Data Plunderer, captains the Query Queen, a sleek and fast database ship that uses her famed "Cache & Conquer" technique to optimize data retrieval, making her the most feared and respected data pirate on the high info-seas.',
     keys: "netlify",
     language: "javascript",
-    favorite: 109234,
+    favorite: 109,234,
     forks: 12,
     issues: 2,
     updates: "Updated 10 days ago",
@@ -143,4 +143,3 @@ const renderRepoPage = () => {
 };
 
 renderRepoPage();
-  

@@ -142,5 +142,4 @@ const renderRepoPage = () => {
   addFavoriteEventListener();
 };
 
-renderRepoPage();
-  
+renderRepoPage():
