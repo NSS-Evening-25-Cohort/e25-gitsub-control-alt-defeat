@@ -38,14 +38,20 @@ const renderProjectPage = () => {
   let app1 = document.querySelector("#app1");
   let app2 = document.querySelector("#app2");
   app1Header.innerHTML = projectsIcon + " Projects";
+  
+  const fixCss = () => {
+    app1.style = '';
+  }
+  fixCss();
 
   const displayProjects = (array) => {
     let list = [];
     for (object of array) {
-      let newItem = `<div class="container">
-        <div class="row-4">
-          <div class="col-3">${object.title}</div>
-          <div class="col-3">${object.description}</div>
+      let newItem = 
+      `<div class="container">
+        <div class="row">
+          <div class="col">${object.title}</div>
+          <div class="col">${object.description}</div>
         </div>
       </div>`;
       list += newItem;
