@@ -120,19 +120,20 @@ const newRepoForm = () => {
 };
 
 const addFavoriteEventListener = () => {
-  const starButtons = document.querySelectorAll('.star-btn')
-  starButtons.forEach(button => {
-    button.addEventListener('click', function(event) {
-      const repoId = parseInt(event.currentTarget.getAttribute('data-id'));
+  const starButtons = document.querySelectorAll(".star-btn");
+  starButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const repoId = parseInt(event.currentTarget.getAttribute("data-id"));
       incrementFavorite(repoId);
     });
   });
 };
 
 const incrementFavorite = (id) => {
-  const repoIndex = repos.findIndex(repo => repo.id === id);
+  const repoIndex = repos.findIndex((repo) => repo.id === id);
   if (repoIndex !== -1) {
     repos[repoIndex].favorite += 1;
+
     renderRepo(repos);
     addFavoriteEventListener();
   }
@@ -146,4 +147,3 @@ const renderRepoPage = () => {
 };
 
 renderRepoPage();
-     
