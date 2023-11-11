@@ -19,15 +19,7 @@
 .card {
   background-color: transparent;
   color: dimgray;
-<<<<<<< HEAD
   overflow: visible;
-=======
-
-  overflow: visible;
-
-  height: 325px;
-
->>>>>>> b435a878ef102e178d0ab5b0e77ffb1458337841
   width: 300px;
 }
 
@@ -44,9 +36,8 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
-
-.btn-close{
-  background-color:darkred;
+.btn-close {
+  background-color: darkred;
   margin-left: 238px;
   width: 15px !important;
   height: 15px !important;
@@ -54,6 +45,5 @@
   border-radius: 25px;
 }
 body {
-background-color: aliceblue;
-
+  background-color: aliceblue;
 }
