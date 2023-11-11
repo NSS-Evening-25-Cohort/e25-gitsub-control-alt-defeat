@@ -19,7 +19,7 @@
 .card {
   background-color: transparent;
   color: dimgray;
-  height: 325px;
+  height: 300px;
   width: 300px;
 }
 
@@ -37,10 +37,7 @@
 }
 
 .btn-close{
-  background-color:darkred;
-  margin-left: 238px;
-  width: 15px !important;
-  height: 15px !important;
-  border: transparent solid 1px;
-  border-radius: 25px;
+  background-color:red;
+  margin-left: 150px;
+
 }

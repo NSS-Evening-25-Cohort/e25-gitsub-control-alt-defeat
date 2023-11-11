@@ -55,28 +55,19 @@ function renderPackagePage() {
 
     for (let card of packages) {
       domString += `<div class="card" style="width: 18rem;">
-  <div class="card-body"> 
-  <button id="deletecard -- ${card.id}" type="button" class="btn-close" aria-label="Close"></button>
+  <div class="card-body"></div> 
+  <div><button type="button" class="btn-close" aria-label="Close"></button></div>
     <h5 class="cardHeader">${card.name}</h5>
     <p class="card-text">${card.info}</p>
     <button type="button" class="btn btn-secondary">Learn More</button>
-  </div>
+  
 </div>`;
     }
     const app1 = document.querySelector("#app1");
     app1.innerHTML = domString;
   };
- 
-  renderToDom(packages);
 
-  app1.addEventListener('click', (event) => {
-    if (event.target.id.includes("deletecard")){
-      const [ ,id] = event.target.id.split("--");
-      const index = packages.findIndex(event => event.id === Number(id));
-      packages.splice(index, 1);
-      renderToDom(packages);
-    }
-  });
+  renderToDom(packages);
 
   const formToDom = (packageForm) => {
     let formString = "";
@@ -115,6 +106,6 @@ function renderPackagePage() {
   };
 
   form.addEventListener("submit", createPackage);
-  
 }
+
 renderPackagePage();
