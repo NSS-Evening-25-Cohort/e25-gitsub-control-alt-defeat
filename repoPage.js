@@ -1,4 +1,4 @@
-const reposIcon = `              <svg
+const reposIcon = `<svg
 xmlns="http://www.w3.org/2000/svg"
 width="16"
 height="16"
@@ -11,6 +11,10 @@ viewBox="0 0 16 16"
 />
 </svg>`;
 
+const starIcon = `<svg xmlns="http://www.w3.org/2000/svg" id="starIcon" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+</svg>`;
+
 const repos = [
   {
     id: 1,
@@ -20,6 +24,7 @@ const repos = [
     keys: "netlify",
     language: "javascript",
     favorite: 1,
+    favorited: false,
     forks: 12,
     issues: 2,
     updates: "Updated 1 days ago",
@@ -32,6 +37,7 @@ const repos = [
     keys: "netlify",
     language: "javascript",
     favorite: 24,
+    favorited: false,
     forks: 12,
     issues: 2,
     updates: "Updated on Dec 15, 1843",
@@ -44,6 +50,7 @@ const repos = [
     keys: "netlify",
     language: "javascript",
     favorite: 89,
+    favorited: false,
     forks: 12,
     issues: 2,
     updates: "Updated 100 days ago",
@@ -56,6 +63,7 @@ const repos = [
     keys: "netlify",
     language: "javascript",
     favorite: 109234,
+    favorited: false,
     forks: 12,
     issues: 2,
     updates: "Updated 10 days ago",
@@ -76,15 +84,19 @@ const renderRepo = (array) => {
         <p class="card-text">${card.description}</p>
         <div class="footer">
           <p class="keys">${card.keys}</p>
-          <p class="language"><img src="https://www.vhv.rs/dpng/d/443-4431349_yellow-circle-png-transparent-png-download.png" alt="Language" /> ${card.language}</p>
-          <p class="favorite"><img src="./images/whiteStar.png" alt="favorite" />${card.favorite}</p>
-          <p class="forks"><img src="./images/whiteForkIcon.png" alt="forks" />${card.forks}</p>
+          <p class="language"><img src="https://www.vhv.rs/dpng/d/443-4431349_yellow-circle-png-transparent-png-download.png" alt="Language" /> ${
+            card.language
+          }</p>
+          <p class="favorite">${starIcon + " "}${card.favorite}</p>
+          <p class="forks"><img src="./images/whiteForkIcon.png" alt="forks" />${
+            card.forks
+          }</p>
           <p class="issues">Issues: ${card.issues}</p>
           <p class="updates">${card.updates}</p>
         </div>
       </div>
       <button type="button" class="star-btn" data-id="${card.id}">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Star_Outline.svg/2144px-Star_Outline.svg.png" alt="favorite"> Star
+   ${starIcon} Star
 </button>
     </div>`;
   });
@@ -98,6 +110,7 @@ const createRepo = (e) => {
     name: document.getElementById("repo-name").value,
     description: document.getElementById("description").value,
     favorite: 0,
+    favorited: false,
     forks: 0,
     issues: 0,
     updates: "Updated just now",
@@ -120,17 +133,17 @@ const newRepoForm = () => {
 };
 
 const addFavoriteEventListener = () => {
-  const starButtons = document.querySelectorAll('.star-btn')
-  starButtons.forEach(button => {
-    button.addEventListener('click', function(event) {
-      const repoId = parseInt(event.currentTarget.getAttribute('data-id'));
+  const starButtons = document.querySelectorAll(".star-btn");
+  starButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const repoId = parseInt(event.currentTarget.getAttribute("data-id"));
       incrementFavorite(repoId);
     });
   });
 };
 
 const incrementFavorite = (id) => {
-  const repoIndex = repos.findIndex(repo => repo.id === id);
+  const repoIndex = repos.findIndex((repo) => repo.id === id);
   if (repoIndex !== -1) {
     repos[repoIndex].favorite += 1;
     renderRepo(repos);
@@ -146,4 +159,3 @@ const renderRepoPage = () => {
 };
 
 renderRepoPage();
-     
