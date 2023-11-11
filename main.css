@@ -176,8 +176,8 @@ ul {
   width: 950px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: left;
+  justify-content: left;
   flex-wrap: wrap;
   gap: 10px;
   overflow: auto;
@@ -275,4 +275,11 @@ button img {
 
 #app3Header {
   font-size: x-large;
+}
+
+.repoCardBody {
+}
+
+.card-text {
+  height: 180px;
 }
