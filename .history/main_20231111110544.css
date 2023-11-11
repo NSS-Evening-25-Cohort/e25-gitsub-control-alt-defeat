@@ -206,8 +206,8 @@ ul {
 }
 
 .footer img {
-  width: 35px;
-  height: 35px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -215,10 +215,10 @@ ul {
   width: 100px;
   height: 50px;
 }
-button img {
-  width: 16px;
-  height: 16px;
-}
+/* button img {
+  width: 30px;
+  height: 3px;
+} */
 .footerPlacement {
   width: fit-content;
   display: flex;

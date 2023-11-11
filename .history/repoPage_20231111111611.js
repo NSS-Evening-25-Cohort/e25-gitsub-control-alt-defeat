@@ -77,7 +77,7 @@ const renderRepo = (array) => {
         <div class="footer">
           <p class="keys">${card.keys}</p>
           <p class="language"><img src="https://www.vhv.rs/dpng/d/443-4431349_yellow-circle-png-transparent-png-download.png" alt="Language" /> ${card.language}</p>
-          <p class="favorite"><img src="./images/whiteStar.png" alt="favorite" />${card.favorite}</p>
+          <p class="favorite"><img src="./images/whiteForkIcon.png"" alt="favorite" />${card.favorite}</p>
           <p class="forks"><img src="./images/whiteForkIcon.png" alt="forks" />${card.forks}</p>
           <p class="issues">Issues: ${card.issues}</p>
           <p class="updates">${card.updates}</p>
