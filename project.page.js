@@ -38,34 +38,7 @@ const renderProjectPage = () => {
   let app1 = document.querySelector("#app1");
   let app2 = document.querySelector("#app2");
   app1Header.innerHTML = projectsIcon + " Projects";
-const startProjectPage = () => {
-  let projects = [
-    {
-      id: 1,
-      title: 'Example 1',
-      Private: true,
-      description: '',
-      updated: '44 seconds ago'
-    },
-    {
-      id: 2,
-      title: 'my-goals',
-      Private: false,
-      description: '',
-      updated: '7 hours ago'
-    },
-    {
-      id: 3,
-      title: 'Sample My Goals',
-      Private: false,
-      description: 'Goals for the NSS Bootcamp',
-      updated: '1 minute ago'
-    }
-  ]
   
-  let app1 = document.querySelector('#app1');
-  let app2 = document.querySelector('#app2');
-
   const fixCss = () => {
     app1.style = '';
   }

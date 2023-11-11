@@ -172,14 +172,8 @@ ul {
 
 #app1 {
   color: white;
-<<<<<<< HEAD
-  border: solid 1px white;
-  height: 650px;
-  width: 1000px;
-=======
   height: auto;
   width: 950px;
->>>>>>> 9b873729eb62b7274916c1c36c0672924c7ea74d
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -264,8 +258,6 @@ button img {
   align-items: center;
   line-height: 1.1;
 }
-<<<<<<< HEAD
-=======
 
 #form {
   display: flex;
@@ -284,4 +276,3 @@ button img {
 #app3Header {
   font-size: x-large;
 }
->>>>>>> 9b873729eb62b7274916c1c36c0672924c7ea74d
