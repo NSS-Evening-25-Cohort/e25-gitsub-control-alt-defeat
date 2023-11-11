@@ -71,7 +71,7 @@ const renderRepo = (array) => {
   let domString = "";
   array.forEach((card) => {
     domString += `<div class="card" style="width: 18rem;">
-      <div class="card-body">
+      <div class="card-body" style="height:540px"; >
         <h5 class="card-title">${card.name}</h5>
         <p class="card-text">${card.description}</p>
         <div class="footer">
