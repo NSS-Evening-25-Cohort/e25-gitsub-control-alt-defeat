@@ -138,6 +138,7 @@ const incrementFavorite = (id) => {
   }
 };
 
+
 const renderRepoPage = () => {
   app1Header.innerHTML = reposIcon + " Repositories:";
   renderRepo(repos);
