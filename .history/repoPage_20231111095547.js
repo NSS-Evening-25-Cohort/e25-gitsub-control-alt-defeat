@@ -41,7 +41,7 @@ const repos = [
     name: "Captain CyberSails",
     description:
       'Captain CyberSails steers the Silicon Scallywag, a digital ship with a virtual reality deck where he develops "The Sea of Codes," a virtual oceanic world where coders can navigate through complex algorithms and engage in hackathons as if they were epic sea battles.',
-    keys: "netlify",
+    keys: "netlify"
     language: "javascript",
     favorite: 89,
     forks: 12,
@@ -143,4 +143,3 @@ const renderRepoPage = () => {
 };
 
 renderRepoPage();
-  

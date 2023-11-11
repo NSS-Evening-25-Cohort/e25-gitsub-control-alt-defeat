@@ -36,6 +36,7 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+
 .btn-close{
   background-color:darkred;
   margin-left: 238px;
@@ -43,4 +44,8 @@
   height: 15px !important;
   border: transparent solid 1px;
   border-radius: 25px;
+
+body {
+background-color: aliceblue;
+
 }
