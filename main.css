@@ -283,3 +283,7 @@ button img {
 .card-text {
   height: 180px;
 }
+
+.card-title {
+  height: 50px;
+}
